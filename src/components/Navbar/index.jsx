@@ -1,13 +1,9 @@
 import React from "react";
 import Img from "./../../assets/img/logo.png";
-import Icon from "./../../assets/svg/home.svg";
-import Log from "./../../assets/svg/sign-out-alt.svg";
-import Settings from "./../../assets/svg/settings.svg";
-import Check from "./../../assets/svg/bookmark.svg";
-import dash from "./../../assets/svg/cross-circle.svg";
+import { NavLink } from "react-router-dom";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
-import { RiDashboard3Fill,RiLogoutCircleRFill } from "react-icons/ri";
-import {MdHistoryEdu} from "react-icons/md"
+import { RiDashboard3Fill, RiLogoutCircleRFill } from "react-icons/ri";
+import { MdHistoryEdu } from "react-icons/md";
 import "./style.scss";
 const index = () => {
   return (
@@ -21,20 +17,28 @@ const index = () => {
       </a>
       <ul className="flex flex-col nav-list list-none gap-3 items-center justify-center w-full">
         <li className="flex flex-col cursor-pointer items-center gap-1 hover:bg-red-500 p-4 rounded-2xl nav-item justify-center">
-          <AiFillHome width={30} height={30} />
-          Home
+          <NavLink to="/" className={`no-underline flex items-center flex-col justify-center text-black`}>
+            <AiFillHome width={30} height={30} />
+            Home
+          </NavLink>
         </li>
         <li className="flex flex-col cursor-pointer items-center gap-1 hover:bg-red-500 p-4 rounded-2xl nav-item  justify-center">
-          <RiDashboard3Fill width={30} height={30} />
-          Dashboard
+          <NavLink to="/dash" className={"no-underline flex items-center flex-col justify-center text-black"}>
+            <RiDashboard3Fill width={30} height={30} />
+            Dashboard
+          </NavLink>
         </li>
         <li className="flex flex-col cursor-pointer items-center gap-1 hover:bg-red-500 p-4 rounded-2xl nav-item justify-center">
-          <MdHistoryEdu width={30} height={30} />
-          Bills
+          <NavLink to="/bills" className={"no-underline flex items-center flex-col justify-center text-black"}>
+            <MdHistoryEdu width={30} height={30} />
+            Bills
+          </NavLink>
         </li>
         <li className="flex flex-col cursor-pointer items-center gap-1 hover:bg-red-500 p-4 rounded-2xl nav-item justify-center">
-          <AiFillSetting width={30} height={30} />
-          Settings
+          <NavLink to="/settings" className={"no-underline flex items-center flex-col justify-center text-black"}>
+            <AiFillSetting width={30} height={30} />
+            Settings
+          </NavLink>
         </li>
       </ul>
       <button className="btn btn-log flex font-medium gap-1 mb-3 flex-col items-center justify-center">
