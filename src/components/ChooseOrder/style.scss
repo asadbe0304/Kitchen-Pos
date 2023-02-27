@@ -1,0 +1,95 @@
+.choose-card{
+  width: 180px;
+  height: 220px;
+  transition: all .3s ease-in-out;
+  img{
+    transition: all .3s ease-in-out;
+  }
+}
+.choose-card:hover{
+  img{
+  transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width:730px) {
+  .choose-order-body{
+    justify-content: center!important;
+    align-items: center!important;
+  }
+  .choose-card{
+    width: 30%;
+    height: 180px;
+  }
+}
+@media screen and (max-width:750px) {
+  .choose-order-top{
+    padding: 0!important;
+  }
+  .choose-title{
+    font-size: 1.1rem!important;
+    line-height: 1.1rem!important;
+    span{
+      font-size: 1.1rem!important;
+      line-height: 1.1rem!important;
+    }
+  }
+  .sort-title{
+    font-size: 1.1rem!important;
+    line-height: 1.1rem!important;
+    span{
+      font-size: 1.1rem!important;
+      line-height: 1.1rem!important;
+    }
+  }
+}
+@media screen and (max-width:605px) {
+  .choose-card{
+    width: 46%;
+    height: 170px;
+  }
+  .choose-title{
+    font-size: 1rem!important;
+    line-height: 1rem!important;
+    span{
+      font-size: 1rem!important;
+      line-height: 1rem!important;
+    }
+  }
+  .sort-title{
+    font-size: 1rem!important;
+    line-height: 1rem!important;
+    span{
+      font-size: 1rem!important;
+      line-height: 1rem!important;
+    }
+  }
+  .choose-order-body{
+    padding: 0!important;
+    justify-content: space-between!important;
+  }
+}
+@media screen and (max-width:440px) {
+
+  .choose-title{
+    font-size: 0.9rem!important;
+    line-height: 0.9rem!important;
+    span{
+      font-size: 0.9rem!important;
+      line-height: 0.9rem!important;
+    }
+  }
+  .sort-title{
+    font-size: 0.9rem!important;
+    line-height: 0.9rem!important;
+    span{
+      font-size: 0.9rem!important;
+      line-height: 0.9rem!important;
+    }
+  }
+}
+@media screen and ( max-width:320px) {
+  .choose-card{
+    width: 100%;
+  }
+}
