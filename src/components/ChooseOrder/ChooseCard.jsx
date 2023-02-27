@@ -21,7 +21,7 @@ const ChooseCard = ({ prop }) => {
             height={80}
             className="rounded-xl animate-[wiggle_8s_linear_infinite] duration-1000"
           />
-          <h3 className="text-black font-medium p-0 m-0">{prop.name}</h3>
+          <h3 className="text-black card-title font-medium p-0 m-0">{prop.name}</h3>
           <span className="font-medium text-slate-600">${prop.price}</span>
         </div>
       ) : (
@@ -36,7 +36,7 @@ const ChooseCard = ({ prop }) => {
             height={80}
             className="rounded-full animate-spn"
           />
-          <h3 className="text-black font-medium p-0 m-0">{prop.name}</h3>
+          <h3 className="text-black card-title font-medium p-0 m-0">{prop.name}</h3>
           <span className="font-medium text-slate-600">${prop.price}</span>
         </div>
       )}

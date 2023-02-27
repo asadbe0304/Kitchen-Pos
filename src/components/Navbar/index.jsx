@@ -11,7 +11,7 @@ import {MdHistoryEdu} from "react-icons/md"
 import "./style.scss";
 const index = () => {
   return (
-    <div className="w-24 navbar h-full p-1 bg-white flex flex-col items-center justify-between fixed top-0 left-0">
+    <div className="w-24 navbar h-full p-1 bg-white flex flex-col items-center justify-between">
       <a href="/" className="logo-link underline-offset-0 p-3 mt-1">
         <img
           src={Img}

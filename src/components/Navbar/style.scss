@@ -5,6 +5,11 @@
   font-weight: 600;
   transition: all 0.3s ease-in-out;
 }
+.navbar{
+  position: fixed;
+  bottom: 0;
+  z-index: 444;
+}
 .nav-item{
   font-size: 12px;
   svg{
@@ -15,7 +20,7 @@
 @media screen and (max-width: 560px) {
   .navbar {
     width: 100%!important;
-    top: 88% !important;
+    bottom: 0% !important;
     padding: 0px 0px!important;
     height: 70px!important;
     z-index: 445;
@@ -62,7 +67,6 @@
   }
   }
   .navbar{
-    top: 90%!important;
     height: 70px!important;
   }
 }
