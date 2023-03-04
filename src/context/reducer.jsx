@@ -9,17 +9,20 @@ export const sumOrder = (order) => {
     0
   );
   let totals = order
-  .reduce((totals, product) => totals + product.price * product.quantity, 0)
-  .toFixed(2);
+    .reduce((totals, product) => totals + product.price * product.quantity, 0)
+    .toFixed(2);
   return { orderCount, totals };
 };
 export const reducers = (state, action) => {
   switch (action.type) {
     case "ADD__ORDER":
+      const upDateCart = [...state.order];
       if (!state.order.find((e) => e.id === action.payload.id)) {
         state.order.push({ ...action.payload, quantity: 1 });
-        // state.order[state.order.findIndex((e) => e.id === action.payload.id)]
-          // .quantity++;
+      } else{
+        state.order[state.order.findIndex((e) => e.id === action.payload.id)]
+          .quantity++;
+        
       }
       return {
         ...state,
@@ -32,24 +35,24 @@ export const reducers = (state, action) => {
         ...sumOrder(state.order.filter((e) => e.id !== action.payload.id)),
         order: [...state.order.filter((e) => e.id !== action.payload.id)],
       };
-      case "INCREASE":
-        state.order[state.order.findIndex((e) => e.id === action.payload.id)]
-          .quantity++;
-  
-        return {
-          ...state,
-          ...sumOrder(state.order),
-          order: [...state.order],
-        };
-      case "INCREASEADD":
-        state.order[state.order.findIndex((e) => e.id === action.payload.id)]
-          .quantity++;
-        return {
-          ...state,
-          ...sumOrder(state.order),
-          order: [...state.order],
-        };
-      
+    case "INCREASE":
+      state.order[state.order.findIndex((e) => e.id === action.payload.id)]
+        .quantity++;
+
+      return {
+        ...state,
+        ...sumOrder(state.order),
+        order: [...state.order],
+      };
+    case "INCREASEADD":
+      state.order[state.order.findIndex((e) => e.id === action.payload.id)]
+        .quantity++;
+      return {
+        ...state,
+        ...sumOrder(state.order),
+        order: [...state.order],
+      };
+
     case "DECREASE":
       state.order[state.order.findIndex((e) => e.id === action.payload.id)]
         .quantity--;

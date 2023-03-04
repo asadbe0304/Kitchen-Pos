@@ -17,7 +17,7 @@ const index = () => {
           Choose
           <span className="text-slate-600 mx-3 font--medium">Order</span>
         </h3>
-        <div className="text-xl font-medium sort-title">Sort By Popular</div>
+        {/* <div className="text-xl font-medium sort-title">Sort By Popular</div> */}
       </div>
       <div className="choose-order-body flex flex-wrap items-start justify-start gap-4  py-2 my-2 px-3 w-full">
         {product.map((e) => {

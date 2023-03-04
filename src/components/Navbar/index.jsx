@@ -31,7 +31,7 @@ const index = () => {
         <li className="flex flex-col cursor-pointer items-center gap-1 hover:bg-red-500 p-4 rounded-2xl nav-item justify-center">
           <NavLink to="/bills" className={"no-underline flex items-center flex-col justify-center text-black"}>
             <MdHistoryEdu width={30} height={30} />
-            Bills
+            Kitchen
           </NavLink>
         </li>
         <li className="flex flex-col cursor-pointer items-center gap-1 hover:bg-red-500 p-4 rounded-2xl nav-item justify-center">
@@ -41,10 +41,10 @@ const index = () => {
           </NavLink>
         </li>
       </ul>
-      <button className="btn btn-log flex font-medium gap-1 mb-3 flex-col items-center justify-center">
+      <NavLink to="/logout" className="btn btn-log flex font-medium gap-1 mb-3 flex-col items-center justify-center">
         <RiLogoutCircleRFill width={25} height={25} />
         Log out
-      </button>
+      </NavLink>
     </div>
   );
 };

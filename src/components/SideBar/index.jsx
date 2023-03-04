@@ -10,7 +10,7 @@ const index = () => {
     state: { orderOpen, order, totals },
     dispatch,
   } = useOrder();
-  
+
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = orderOpen ? "hidden" : "auto";
@@ -48,7 +48,7 @@ const index = () => {
                     key={e.id}
                     className="flex items-center p-2 justify-between rounded-xl order-item hover:scale-95 border w-full"
                   >
-                    <img src={e.image} alt="images" width={50} height={50} />
+                    <img src={e.images} alt="images" width={50} height={50} />
                     <h5 className="flex flex-col font-medium text-sm m-0 p-0 items-start justify-between">
                       {e.name}
                       <span className="text-slate-400 text-xs">${e.price}</span>
@@ -57,7 +57,7 @@ const index = () => {
                       <p className="flex gap-2 mx-2 m-0 p-0 items-center font-medium justify-between">
                         x{e.quantity}
                         <span className="text-slate-400 font-medium">
-                          ${e.price * e.quantity}
+                          ${(e.price * e.quantity).toFixed(1)}
                         </span>
                       </p>
                       <div className="flex items-center justify-center border rounded-lg w-20 my-2">

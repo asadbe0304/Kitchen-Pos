@@ -1,19 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
 import Header from "../../components/Header";
 import SideBar from "./../SideBar/index";
+
+
 import Card from "./../Ui/Card";
+import { useOrder } from "../../context/context";
 import Choose from "./../ChooseOrder/index";
 import "./style.scss";
+
 const index = () => {
-  let arr = [
-    "Drink",
-    "Ice-Cream",
-    "Burger",
-    "Pizza",
-    "Spinner",
-    "Combo",
-    "Milkshake",
-  ];
+
+
+  const {
+    state: { product },
+  } = useOrder();
   return (
     <>
       <Header />
@@ -25,9 +25,10 @@ const index = () => {
               Menu <span className="text-slate-600">Category</span>
             </h3>
             <div className="w-full px-3 box snap-x snap-mandatory">
+              
               <div className="category-order-top snap-x snap-mandatory flex items-center justify-around gap-3 py-3">
-                {arr.map((e) => {
-                  return <Card prop={e} key={e} />;
+                {product.slice(6, 12).map((e) => {
+                  return <Card prop={e} key={e.id} />;
                 })}
               </div>
             </div>

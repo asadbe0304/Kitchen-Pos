@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        wiggle: 'ping 4s linear infinite',
+        wiggle: 'ping 1s both',
       }
     }
   }

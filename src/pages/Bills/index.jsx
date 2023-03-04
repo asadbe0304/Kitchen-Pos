@@ -4,7 +4,7 @@ import Header from "./../../components/Header";
 const index = () => {
   return (
     <>
-      <Header />
+      <Header />/
       <div>
         <h2>Bills pages</h2>
       </div>

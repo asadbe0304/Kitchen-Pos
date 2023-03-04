@@ -90,6 +90,12 @@
       line-height: 0.9rem!important;
     }
   }
+  .choose-order-body{
+    gap: 10px!important;
+  }
+  .choose-card{
+    width: 48%!important;
+  }
 }
 @media screen and ( max-width:320px) {
   .choose-card{
