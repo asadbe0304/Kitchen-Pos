@@ -5,7 +5,19 @@
 .video {
   margin-top: 30px;
 }
-
+.video-tracker{
+  width: 100%;
+  height: 130px;
+  overflow-y: scroll;
+}
+.track-time{
+  background: var(--order);
+}
+.camera-screen-img{
+  margin-top: 30px;
+  width: 80px!important;
+  height: 80px!important;
+}
 @media screen and (max-width: 921px) {
   .video-track {
     flex-direction: column !important;

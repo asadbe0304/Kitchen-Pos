@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 import { RiDashboard3Fill, RiLogoutCircleRFill } from "react-icons/ri";
 import { MdHistoryEdu, MdTrackChanges } from "react-icons/md";
+import {TbToolsKitchen} from "react-icons/tb"
 
 const list = () => {
   return (
@@ -31,7 +32,7 @@ const list = () => {
             to="/bills"
             className={({ isActive }) => (isActive ? "active" : "item")}
           >
-            <MdHistoryEdu width={30} height={30} />
+            <TbToolsKitchen width={30} height={30} />
             Kitchen
           </NavLink>
         </li>
