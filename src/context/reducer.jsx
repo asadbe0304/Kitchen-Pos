@@ -4,25 +4,20 @@ const StorageOrder = (order) => {
 export const sumOrder = (order) => {
   StorageOrder(order);
 
-  let orderCount = order.reduce(
-    (totals, product) => totals + product.quantity,
-    0
-  );
+  let orderCount = order.reduce((totals, order) => totals + order.quantity, 0);
   let totals = order
-    .reduce((totals, product) => totals + product.price * product.quantity, 0)
+    .reduce((totals, order) => totals + order.price * order.quantity, 0)
     .toFixed(2);
   return { orderCount, totals };
 };
 export const reducers = (state, action) => {
   switch (action.type) {
     case "ADD__ORDER":
-      const upDateCart = [...state.order];
       if (!state.order.find((e) => e.id === action.payload.id)) {
         state.order.push({ ...action.payload, quantity: 1 });
-      } else{
+      } else {
         state.order[state.order.findIndex((e) => e.id === action.payload.id)]
           .quantity++;
-        
       }
       return {
         ...state,

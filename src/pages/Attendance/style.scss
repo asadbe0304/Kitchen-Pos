@@ -1,0 +1,25 @@
+.attendance {
+  background: var(--card);
+  margin-bottom: 100px;
+}
+.video {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 921px) {
+  .video-track {
+    flex-direction: column !important;
+  }
+  .video {
+    width: 100% !important;
+  }
+  .track-form {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width:560px) {
+  .attendance{
+    margin-left: 0px!important;
+    width: 100%!important;
+  }
+}

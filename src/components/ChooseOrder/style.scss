@@ -1,17 +1,23 @@
 .choose-card{
-  width: 180px;
+  width: 23%;
   height: 220px;
   transition: all .3s ease-in-out;
   img{
     transition: all .3s ease-in-out;
   }
+  background: var(--card);
 }
 .choose-card:hover{
   img{
   transform: scale(1.1);
   }
 }
-
+.choose-title{
+  color: var(--title);
+  span{
+    color: var(--text);
+  }
+}
 @media screen and (max-width:730px) {
   .choose-order-body{
     justify-content: center!important;
@@ -99,6 +105,6 @@
 }
 @media screen and ( max-width:320px) {
   .choose-card{
-    width: 100%;
+    width: 100%!important;
   }
 }

@@ -1,6 +1,7 @@
 .header {
   margin: 0px 310px 0px 90px;
   width: 64%;
+  background: var(--card);
 }
 .profile {
   top: 60px;
@@ -10,6 +11,7 @@
   padding: 20px;
   width: 200px;
   height: 150px;
+  background: var(--card);
   border-radius: 10px;
   ul{
     width: 100%;
@@ -20,13 +22,16 @@
     right: 20px;
     width: 30px;
     height: 30px;
+    background: var(--card);
       border-style: solid;
    border-width: 0 20px 40px 20px;
    border-color: transparent transparent transparent transparent;
    transform: rotate(50deg);
   }
 }
-
+.search-input{
+  background: var(--order);
+}
 .cart-order {
   display: none;
 }

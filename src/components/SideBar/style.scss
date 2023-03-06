@@ -17,18 +17,23 @@
   border-radius: 5px;
 }
 .sidebar{
-  z-index: 555;
+  z-index: 556;
   opacity: 1;
+  background: var(--card);
 }
 .layer{
   position: fixed;
   display: flex;
   top: 0;
-  z-index: 4;
+  z-index: 455;
   justify-content: end;
   height: 100vh!important;
   opacity: 0.9;
   transform: translateY(-100%);
+  filter: blur(0px);
+}
+.order-item{
+  background: var(--order);
 }
 
 .hide{

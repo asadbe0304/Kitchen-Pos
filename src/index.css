@@ -1,10 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --body: #f1f1f1ad;
+  --card: #fff;
+  --title: #000;
+  --text: #383838;
+  --order:  #dadadada;
+}
+.dark {
+  --body: #000000;
+  --card: #3f3f3f;
+  --title: #ffffff;
+  --text: #e9e9e9;
+  --order:  #20232bc5;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: #fafafa;
+  background: var(--body);
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */

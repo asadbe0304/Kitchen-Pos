@@ -7,7 +7,7 @@ import { useOrder } from "../../context/context";
 import "./style.scss";
 const index = () => {
   const {
-    state: { orderOpen, order, totals },
+    state: { orderOpen, order, totals, orderCount },
     dispatch,
   } = useOrder();
 
@@ -15,7 +15,6 @@ const index = () => {
     const body = document.querySelector("body");
     body.style.overflow = orderOpen ? "hidden" : "auto";
   }, [orderOpen]);
-
   return (
     <>
       <div
@@ -25,12 +24,12 @@ const index = () => {
         onClick={() => dispatch({ type: "ORDER__CART", payload: false })}
       ></div>
       <div
-        className={`w-96 sidebar bg-white fixed right-0 top-0 flex flex-col px-5 pb-4 items-center justify-start  pt-7 h-full ${
+        className={`w-96 sidebar shadow-2xl  fixed right-0 top-0 flex flex-col px-5 pb-4 items-center justify-start  pt-7 h-full ${
           orderOpen ? "hide" : "show"
         }`}
       >
         <div className="w-full flex items-center justify-between">
-          <h4 className="font-medium text-2xl">Order Menu </h4>
+          <h4 className="font-medium text-2xl nav-title">Order Menu </h4>
 
           <div className="flex items-center gap-2 justify-between">
             <img src={Edit} alt="images" width={20} height={20} />
@@ -46,15 +45,15 @@ const index = () => {
                 return (
                   <li
                     key={e.id}
-                    className="flex items-center p-2 justify-between rounded-xl order-item hover:scale-95 border w-full"
+                    className="flex items-center order-item p-2 justify-between rounded-xl order-item hover:scale-95 border w-full"
                   >
-                    <img src={e.images} alt="images" width={50} height={50} />
-                    <h5 className="flex flex-col font-medium text-sm m-0 p-0 items-start justify-between">
+                    <img src={e.images} className="rounded-full" alt="images" width={50} height={50} />
+                    <h5 className="flex flex-col nav-title font-medium text-sm m-0 p-0 items-start justify-between">
                       {e.name}
-                      <span className="text-slate-400 text-xs">${e.price}</span>
+                      <span className="nav-title text-xs">${e.price}</span>
                     </h5>
                     <div>
-                      <p className="flex gap-2 mx-2 m-0 p-0 items-center font-medium justify-between">
+                      <p className="flex gap-2 mx-2 m-0 p-0 nav-title items-center font-medium justify-between">
                         x{e.quantity}
                         <span className="text-slate-400 font-medium">
                           ${(e.price * e.quantity).toFixed(1)}
@@ -72,7 +71,7 @@ const index = () => {
                               });
                             }
                           }}
-                          className="decrease bg-red-600 font-medium flex items-center text-white justify-center text-lg w-1/2 rounded-lg rounded-r-none"
+                          className="decrease bg-orange-400 font-medium flex items-center text-white justify-center text-lg w-1/2 rounded-lg rounded-r-none"
                         >
                           -
                         </div>
@@ -89,15 +88,15 @@ const index = () => {
                   </li>
                 );
               })
-            : "Not order "}
+            : <h3 className="nav-title">Not Order</h3>}
         </ul>
         <hr />
         <div className="sub-total flex items-center justify-between my-4 border-t p-2 w-full">
-          <h5 className="font-medium ">SubTotal :</h5>
-          <strong className="sub-price">$20</strong>
+          <h5 className="font-medium nav-title ">SubTotal :</h5>
+          <strong className="sub-price nav-title">$ {totals == undefined ? 0 : totals}</strong>
         </div>
-        <div className="bg-red-500 hover:bg-red-600 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-xl">
-          <button className="text-white font-medium"> Charge $20 </button>
+        <div className="bg-orange-400 hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-xl">
+          <button className="text-white font-medium cursor-pointer" disabled > Charge $ {totals} </button>
         </div>
       </div>
     </>

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../components/Header";
 import SideBar from "./../SideBar/index";
-
-
 import Card from "./../Ui/Card";
 import { useOrder } from "../../context/context";
 import Choose from "./../ChooseOrder/index";

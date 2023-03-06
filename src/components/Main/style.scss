@@ -6,6 +6,12 @@
   width: 800px;
   // overflow-x: scroll;
 }
+.category-title{
+  color: var(--title);
+  span{
+    color: var(--text);
+  }
+}
 
 @media screen and (max-width: 1050px) {
   .category-order {
