@@ -21,6 +21,12 @@
   opacity: 1;
   background: var(--card);
 }
+.modal{
+  z-index: 3333;
+}
+.bg-modal{
+  z-index: 3332;
+}
 .layer{
   position: fixed;
   display: flex;

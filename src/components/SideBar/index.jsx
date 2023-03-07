@@ -1,11 +1,13 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Edit from "./../../assets/svg/edit.svg";
 import Img from "./../../assets/img/soft.jpg";
 import { MdClose } from "react-icons/md";
 import { useOrder } from "../../context/context";
 import "./style.scss";
+import Modal from "./modalOrder";
 const index = () => {
+  const [showModal, setShowModal] = useState(false);
   const {
     state: { orderOpen, order, totals, orderCount },
     dispatch,
@@ -40,65 +42,82 @@ const index = () => {
           </div>
         </div>
         <ul className="w-full flex flex-col order-list gap-3 my-4 items-center justify-start order-list">
-          {order.length > 0
-            ? order.map((e) => {
-                return (
-                  <li
-                    key={e.id}
-                    className="flex items-center order-item p-2 justify-between rounded-xl order-item hover:scale-95 border w-full"
-                  >
-                    <img src={e.images} className="rounded-full" alt="images" width={50} height={50} />
-                    <h5 className="flex flex-col nav-title font-medium text-sm m-0 p-0 items-start justify-between">
-                      {e.name}
-                      <span className="nav-title text-xs">${e.price}</span>
-                    </h5>
-                    <div>
-                      <p className="flex gap-2 mx-2 m-0 p-0 nav-title items-center font-medium justify-between">
-                        x{e.quantity}
-                        <span className="text-slate-400 font-medium">
-                          ${(e.price * e.quantity).toFixed(1)}
-                        </span>
-                      </p>
-                      <div className="flex items-center justify-center border rounded-lg w-20 my-2">
-                        <div
-                          onClick={() => {
-                            if (e.quantity > 1) {
-                              dispatch({ type: "DECREASE", payload: e });
-                            } else {
-                              dispatch({
-                                type: "REMOVE__ORDER",
-                                payload: e,
-                              });
-                            }
-                          }}
-                          className="decrease bg-orange-400 font-medium flex items-center text-white justify-center text-lg w-1/2 rounded-lg rounded-r-none"
-                        >
-                          -
-                        </div>
-                        <div
-                          onClick={() =>
-                            dispatch({ type: "INCREASE", payload: e })
+          {order.length > 0 ? (
+            order.map((e) => {
+              return (
+                <li
+                  key={e.id}
+                  className="flex items-center order-item p-2 justify-between rounded-xl order-item hover:scale-95 border w-full"
+                >
+                  <img
+                    src={e.images}
+                    className="rounded-full"
+                    alt="images"
+                    width={50}
+                    height={50}
+                  />
+                  <h5 className="flex flex-col nav-title font-medium text-sm m-0 p-0 items-start justify-between">
+                    {e.name}
+                    <span className="nav-title text-xs">${e.price}</span>
+                  </h5>
+                  <div>
+                    <p className="flex gap-2 mx-2 m-0 p-0 nav-title items-center font-medium justify-between">
+                      x{e.quantity}
+                      <span className="text-slate-400 font-medium">
+                        ${(e.price * e.quantity).toFixed(1)}
+                      </span>
+                    </p>
+                    <div className="flex items-center justify-center border rounded-lg w-20 my-2">
+                      <div
+                        onClick={() => {
+                          if (e.quantity > 1) {
+                            dispatch({ type: "DECREASE", payload: e });
+                          } else {
+                            dispatch({
+                              type: "REMOVE__ORDER",
+                              payload: e,
+                            });
                           }
-                          className="increase bg-zinc-900 font-medium p-0 text-white flex items-center justify-center text-lg w-1/2 rounded-lg rounded-l-none"
-                        >
-                          +
-                        </div>
+                        }}
+                        className="decrease bg-orange-400 font-medium flex items-center text-white justify-center text-lg w-1/2 rounded-lg rounded-r-none"
+                      >
+                        -
+                      </div>
+                      <div
+                        onClick={() =>
+                          dispatch({ type: "INCREASE", payload: e })
+                        }
+                        className="increase bg-zinc-900 font-medium p-0 text-white flex items-center justify-center text-lg w-1/2 rounded-lg rounded-l-none"
+                      >
+                        +
                       </div>
                     </div>
-                  </li>
-                );
-              })
-            : <h3 className="nav-title">Not Order</h3>}
+                  </div>
+                </li>
+              );
+            })
+          ) : (
+            <h3 className="nav-title">Not Order</h3>
+          )}
         </ul>
         <hr />
         <div className="sub-total flex items-center justify-between my-4 border-t p-2 w-full">
           <h5 className="font-medium nav-title ">SubTotal :</h5>
-          <strong className="sub-price nav-title">$ {totals == undefined ? 0 : totals}</strong>
+          <strong className="sub-price nav-title">
+            $ {totals == undefined ? 0 : totals}
+          </strong>
         </div>
-        <div className="bg-orange-400 hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-xl">
-          <button className="text-white font-medium cursor-pointer" disabled > Charge $ {totals} </button>
+        <div
+          onClick={() => setShowModal(true)}
+          className="bg-orange-400 hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-xl"
+        >
+          <button className="text-white font-medium cursor-pointer">
+            {" "}
+            Charge $ {totals}{" "}
+          </button>
         </div>
       </div>
+      <Modal prop={showModal} setShow={setShowModal} />
     </>
   );
 };
