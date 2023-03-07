@@ -14,7 +14,6 @@ const index = () => {
   const videoConstraints = () => {
     facingMode: "user";
   };
-  console.log(input);
   return (
     <>
       <div className="container">
