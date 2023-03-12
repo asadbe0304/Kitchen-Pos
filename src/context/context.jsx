@@ -1,4 +1,4 @@
-import { faker } from "@faker-js/faker";
+
 import { createContext, useReducer, useContext, useEffect } from "react";
 import { reducers, sumOrder } from "./reducer";
 import { data } from "./../db/db";

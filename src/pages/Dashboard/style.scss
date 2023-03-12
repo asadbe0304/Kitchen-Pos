@@ -1,0 +1,51 @@
+.dashboard-invoices {
+  width: 95%;
+  margin: 0 80px 0px 80px;
+}
+.dashboard-invoice {
+  padding: 20px;
+  width: 23%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: url(./../../assets//svg/Ellipse.svg) no-repeat;
+  background-position: right bottom;
+}
+.transaction{
+  width: 70%;
+  // height: 590px;
+  background: var(--card);
+}
+.stastics{
+  width: 29%;
+  background: var(--card);
+}
+@media screen and (max-width: 1050px) {
+  .dashboard-invoices {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .dashboard-invoice {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .dashboard-invoices {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width: 470px) {
+  .dashboard-invoice {
+    justify-content: flex-start !important;
+    width: 48%;
+  }
+}
+@media screen and (max-width: 370px) {
+  .dashboard-invoice {
+    width: 100%;
+  }
+}
