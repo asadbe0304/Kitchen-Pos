@@ -9,6 +9,7 @@ import Logout from "./pages/Logout/login";
 import Sign from "./pages/Sign/log";
 import { Route, Routes } from "react-router-dom";
 import Track from "./pages/Attendance";
+import Profile from "./pages/Profile"
 const App = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/logout" element={<Logout />} />
         <Route path="/sign" element={<Sign />} />
         <Route path="/track" element={<Track />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );

@@ -1,0 +1,54 @@
+.bg-profile {
+  background: url("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2710&amp;q=80")
+    no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.profile-avatar {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+.profile-top {
+  margin: 0;
+}
+.animate {
+  position: absolute;
+  z-index: 1;
+  width: 135px;
+  height: 135px;
+  background: transparent;
+  border: 8px solid #2980b9;
+}
+.avatar {
+  margin: 0;
+  // border: 10px solid #901ff9;
+  object-fit: cover;
+}
+.profile-bottom {
+  margin-top: 90px !important;
+}
+@media screen and (max-width: 640px) {
+  .profile-bottom {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .top-left {
+    width: 100% !important;
+  }
+  .top-right {
+    width: 100% !important;
+    button {
+      width: 100% !important;
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .profile-inner {
+    margin-left: 0px !important;
+    width: 100% !important;
+  }
+}

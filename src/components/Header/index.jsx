@@ -4,10 +4,9 @@ import SearchImg from "./../../assets/svg/search.svg";
 import Avatar from "./../../assets/img/2.jpg";
 import { MdNotifications, MdWbSunny, MdNightlight } from "react-icons/md";
 import Cart from "./../../assets/svg/shopping-cart.svg";
-
 import { useOrder } from "../../context/context";
-
 import "./style.scss";
+import { NavLink } from "react-router-dom";
 const index = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
@@ -92,7 +91,12 @@ const index = () => {
             >
               <h2 className="font-medium nav-title"> Hi Admin </h2>
               <ul className="list-none flex flex-col items-start gap-3 border-t-2">
-                <li className="nav-title font-medium text-md">Profile</li>
+                <NavLink
+                  to={"/profile"}
+                  className="nav-title font-medium text-md"
+                >
+                  Profile
+                </NavLink>
                 <li
                   className="nav-title font-medium text-md"
                   onClick={() => toggleTheme()}
