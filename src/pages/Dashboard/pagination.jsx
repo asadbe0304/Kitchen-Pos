@@ -24,8 +24,8 @@ const Pagination = ({
             onClick={() => setCurrentPage(page)}
             className={
               page == currentPage
-                ? "btn border py-1 px-3 rounded bg-amber-500"
-                : "border py-1 px-3 rounded"
+                ? "btn border py-1 px-3 nav-title rounded bg-amber-500"
+                : "border py-1 nav-title px-3 rounded"
             }
           >
             {page}
