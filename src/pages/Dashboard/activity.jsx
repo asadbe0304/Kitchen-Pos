@@ -46,7 +46,7 @@ const activity = () => {
   ];
   return (
     <>
-      <div className="bg-white  p-5 rounded-xl shadow-lg shadow-slate-500">
+      <div className="activity-inner p-5 rounded-xl shadow-lg shadow-slate-500">
         <div className="mb-5">
         <h3 className="font-medium">Activity</h3>
         <strong className="font-medium"> $ 345,34</strong>
