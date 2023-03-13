@@ -1,20 +1,17 @@
 import React from "react";
+import { useOrder } from "../../context/context";
 
 export default function Modal({ prop, setShow }) {
+  const {
+    state: { order },
+  } = useOrder();
+  console.log(order);
   return (
     <>
-      {/* <button
-        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
-      >
-        Open regular modal
-      </button> */}
       {prop ? (
         <>
-        
-
           <div className="justify-center modal items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative md:w-2/3 lg:w-10/12 w-11/12 my-6 mx-auto ">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
@@ -30,10 +27,37 @@ export default function Modal({ prop, setShow }) {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                  
-                  </p>
+                <div className="flex items-center justify-between w-full">
+                  <div
+                    className="overflow-y-scroll w-1/2"
+                    style={{ height: "500px" }}
+                  >
+                    {order.length > 0
+                      ? order.map((e) => {
+                          return (
+                            <div
+                              key={e.id}
+                              className="flex items-center border rounded-md w-full justify-between p-2 flex-auto"
+                            >
+                              <img
+                                src={e.images}
+                                alt="images"
+                                width={80}
+                                height={80}
+                              />
+                              <p className="my-4 text-black text-lg leading-relaxed">
+                                {e.name}
+                              </p>
+                              <strong>{e.price}</strong>
+                            </div>
+                          );
+                        })
+                      : "Not order"}
+                  </div>
+                  <div className="checkout">
+                    <div className="checkout-order"></div>
+                    Calculator
+                  </div>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
@@ -56,7 +80,6 @@ export default function Modal({ prop, setShow }) {
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 bg-modal bg-black"></div>
-
         </>
       ) : null}
     </>
