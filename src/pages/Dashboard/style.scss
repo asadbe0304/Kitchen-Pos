@@ -13,25 +13,50 @@
   background: url(./../../assets//svg/Ellipse.svg) no-repeat;
   background-position: right bottom;
 }
-.transaction{
+.transaction {
   width: 70%;
-  // height: 590px;
+  height: 490px;
   background: var(--card);
 }
-.stastics{
+.stastics {
   width: 29%;
+  height: 490px;
   background: var(--card);
 }
 @media screen and (max-width: 1050px) {
   .dashboard-invoices {
     width: 92%;
   }
-}
-@media screen and (max-width: 1050px) {
   .dashboard-invoice {
     width: 49%;
   }
 }
+@media screen and (max-width: 980px) {
+  .transaction {
+    width: 100% !important;
+  }
+  .stastics {
+    width: 100%;
+    img {
+      width: 80%;
+      height: 340px;
+    }
+  }
+  .action-list {
+    width: 100% !important;
+    overflow-x: scroll;
+    li {
+      width: 800px;
+    }
+  }
+  .latest-action {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .dashboard-invoices {
     width: 100%;

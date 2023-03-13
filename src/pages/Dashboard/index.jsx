@@ -14,7 +14,7 @@ const index = () => {
         <div className="container">
           <div className="dashboard-invoices">
             <Analytic />
-            <div className="w-full flex items-start justify-between gap-2 px-3 mt-8 mb-20">
+            <div className="w-full flex items-start latest-action justify-between gap-2 px-3 mt-8 mb-20">
               <TransAction />
               <Statics />
             </div>
