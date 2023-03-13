@@ -3,7 +3,7 @@ import { useOrder } from "../../context/context";
 
 export default function Modal({ prop, setShow }) {
   const {
-    state: { order },
+    state: { order, totals },
   } = useOrder();
   console.log(order);
   return (
@@ -21,13 +21,11 @@ export default function Modal({ prop, setShow }) {
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
                   >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                      ×
-                    </span>
+                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none"></span>
                   </button>
                 </div>
                 {/*body*/}
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-start justify-between w-full">
                   <div
                     className="overflow-y-scroll w-1/2"
                     style={{ height: "500px" }}
@@ -48,15 +46,55 @@ export default function Modal({ prop, setShow }) {
                               <p className="my-4 text-black text-lg leading-relaxed">
                                 {e.name}
                               </p>
-                              <strong>{e.price}</strong>
+                              <p className="flex gap-2 mx-2 m-0 p-0 nav-title items-center font-medium justify-between">
+                                x{e.quantity}
+                                <span className="text-slate-400 font-medium">
+                                  ${(e.price * e.quantity).toFixed(1)}
+                                </span>
+                              </p>
                             </div>
                           );
                         })
                       : "Not order"}
                   </div>
-                  <div className="checkout">
-                    <div className="checkout-order"></div>
-                    Calculator
+                  <div className="checkout mt-2 mx-auto flex-col w-1/2  flex items-center justify-center">
+                    <div className="checkout-order-btn w-1/2">
+                      <button className="hover:bg-orange-400 border-orange-400 border py-1 px-3 rounded-md">
+                        Terminal
+                      </button>
+                      <button className="border-orange-400 border py-1 px-3 rounded-md hover:bg-orange-400 transition-all duration-300">
+                        Cash
+                      </button>
+                      <button className="hover:bg-orange-400 border-orange-400 border py-1 px-3 rounded-md">
+                        Payme/Click
+                      </button>
+                    </div>
+                    <div className="calculator w-full border-t-2 my-2 px-2">
+                      <div className="flex items-start justify-between my-2 border-b-2 font-medium nav-title p-3">
+                        Total:
+                        <p className="total-check bg-red-400 p-2 text-white rounded-md">
+                         $ {totals}
+                        </p>
+                      </div>
+                      <div className="flex items-start justify-between gap-1 px-3">
+                        <label
+                          htmlFor="check"
+                          className="flex flex-col items-start justify-between"
+                        >
+                          Cash:
+                          <input
+                            type="number"
+                            id="check"
+                            placeholder="100$"
+                            className="check-input border-b-2 outline-none border-b-black py-2 my-2 px-2"
+                          />
+                        </label>
+                        <div className="check-difference ml-2 flex flex-col items-start">
+                          Difference
+                          <span className="text-red-400 font-medium ">34$</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 {/*footer*/}
