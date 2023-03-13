@@ -23,7 +23,7 @@
   height: 490px;
   background: var(--card);
 }
-.static-bar{
+.static-bar {
   overflow-x: scroll;
 }
 .balance {
@@ -48,18 +48,29 @@
   background: #ffffff;
   border-radius: 20px;
 }
-.total-title{
+.total-title {
   font-size: 11px;
 }
-.total-price-title{
+.total-price-title {
   font-size: 18px;
   line-height: 18px;
+}
+@media screen and (max-width: 1067px) {
+  .wrapper-balance {
+    flex-wrap: wrap;
+  }
+  .balance-details {
+    width: 48% !important;
+  }
+  .activity {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 1050px) {
   .dashboard-invoices {
     width: 92%;
   }
-  .static-bar{
+  .static-bar {
     overflow-x: scroll;
   }
   .dashboard-invoice {
@@ -70,12 +81,12 @@
   .transaction {
     width: 100% !important;
   }
-  .static-bar{
+  .static-bar {
     overflow-x: scroll;
   }
-  .recharts-wrapper{
-    width: 100%!important;
-    height: 300px!important;
+  .recharts-wrapper {
+    width: 100% !important;
+    height: 300px !important;
   }
   // .recharts-surface{
   //   width: 100%!important;
@@ -102,11 +113,22 @@
     justify-items: center;
   }
 }
-
+@media screen and (max-width: 740px) {
+  .balance-details {
+    width: 100% !important;
+  }
+  .activit-bar {
+    // width: 500px!important;
+    overflow-x: scroll;
+  }
+}
 @media screen and (max-width: 560px) {
   .dashboard-invoices {
     width: 100%;
     margin: 0 !important;
+  }
+  .dashboard-graphics {
+    padding: 0 !important;
   }
 }
 @media screen and (max-width: 470px) {
@@ -117,6 +139,12 @@
 }
 @media screen and (max-width: 370px) {
   .dashboard-invoice {
+    width: 100%;
+  }
+  .wrapper-balance {
+    padding: 0 !important;
+  }
+  .balance{
     width: 100%;
   }
 }

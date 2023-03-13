@@ -51,7 +51,7 @@ const activity = () => {
         <h3 className="font-medium">Activity</h3>
         <strong className="font-medium"> $ 345,34</strong>
         </div>
-        <div className="w-full ">
+        <div className="w-full activit-bar">
         <BarChart
           width={300}
           height={300}
