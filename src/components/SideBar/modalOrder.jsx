@@ -23,6 +23,7 @@ export default function Modal({ prop, setShow }) {
     setTimeout(() => {
       setShow(false);
     }, 2000);
+    dispatch({ type: "ORDER__CART" });
     dispatch({ type: "CLEAR" });
     localStorage.removeItem("totals");
     localStorage.removeItem("order");
