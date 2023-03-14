@@ -86,13 +86,15 @@ export default function Modal({ prop, setShow }) {
                           <input
                             type="number"
                             id="check"
+                            value={difference}
+                            onChange={(e)=> setDifference(e.target.value)}
                             placeholder="100$"
                             className="check-input border-b-2 outline-none border-b-black py-2 my-2 px-2"
                           />
                         </label>
                         <div className="check-difference ml-2 flex flex-col items-start">
                           Difference
-                          <span className="text-red-400 font-medium ">34$</span>
+                          <span className="text-red-400 font-medium "> {(totals - difference).toFixed(1)}$</span>
                         </div>
                       </div>
                     </div>
