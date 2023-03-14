@@ -1,16 +1,40 @@
 import React, { useState } from "react";
 import { useOrder } from "../../context/context";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Modal({ prop, setShow }) {
   const {
     state: { order, totals },
   } = useOrder();
   const [difference, setDifference] = useState();
-
+  const notify = () => {
+    setDifference("");
+    toast.success("Wow Success!"),
+      {
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      };
+  };
+  console.log(difference);
   return (
     <>
       {prop ? (
         <>
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
           <div className="justify-center modal items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 outline-none focus:outline-none">
             <div className="relative md:w-2/3 lg:w-10/12 w-11/12 my-6 mx-auto ">
               {/*content*/}
@@ -87,14 +111,17 @@ export default function Modal({ prop, setShow }) {
                             type="number"
                             id="check"
                             value={difference}
-                            onChange={(e)=> setDifference(e.target.value)}
+                            onChange={(e) => setDifference(e.target.value)}
                             placeholder="100$"
                             className="check-input border-b-2 outline-none border-b-black py-2 my-2 px-2"
                           />
                         </label>
                         <div className="check-difference ml-2 flex flex-col items-start">
                           Difference
-                          <span className="text-red-400 font-medium "> {(totals - difference).toFixed(1)}$</span>
+                          <span className="text-red-400 font-medium ">
+                            {" "}
+                            {(totals - difference).toFixed(1)}$
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -112,7 +139,7 @@ export default function Modal({ prop, setShow }) {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShow(false)}
+                    onClick={notify}
                   >
                     Placing an order
                   </button>
