@@ -10,6 +10,7 @@ import Sign from "./pages/Sign/log";
 import { Route, Routes } from "react-router-dom";
 import Track from "./pages/Attendance";
 import Profile from "./pages/Profile"
+import Cart from "./pages/Cart"
 const App = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/sign" element={<Sign />} />
         <Route path="/track" element={<Track />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </>
   );

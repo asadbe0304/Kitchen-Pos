@@ -69,7 +69,7 @@ const index = () => {
                           22
                         </span>
                         <span className="text-sm text-blueGray-400">
-                          Friends
+                          Achievement
                         </span>
                       </div>
                       <div className="p-3 text-center">
@@ -77,7 +77,7 @@ const index = () => {
                           10
                         </span>
                         <span className="text-sm text-blueGray-400">
-                          Photos
+                          Deggre
                         </span>
                       </div>
                       <div className=" p-3 text-center">
@@ -85,7 +85,7 @@ const index = () => {
                           89
                         </span>
                         <span className="text-sm text-blueGray-400">
-                          Comments
+                          Master
                         </span>
                       </div>
                     </div>

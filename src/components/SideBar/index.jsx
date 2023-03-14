@@ -5,18 +5,14 @@ import Img from "./../../assets/img/soft.jpg";
 import { MdClose } from "react-icons/md";
 import { useOrder } from "../../context/context";
 import "./style.scss";
-import Modal from "./modalOrder";
+import { NavLink, useNavigate } from "react-router-dom";
 const index = () => {
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
   const {
-    state: { orderOpen, order },
+    state: { order, orderOpen },
     dispatch,
   } = useOrder();
 
-  useEffect(() => {
-    const body = document.querySelector("body");
-    body.style.overflow = orderOpen ? "hidden" : "auto";
-  }, [orderOpen]);
   let total = localStorage.getItem("totals");
   let ordercount = localStorage.getItem("Count");
   console.log(total);
@@ -35,7 +31,7 @@ const index = () => {
       >
         <div className="w-full flex items-center justify-between">
           <h4 className="font-medium text-2xl nav-title">
-            Order Menu {ordercount}{" "}
+            Order Menu
           </h4>
 
           <div className="flex items-center gap-2 justify-between">
@@ -113,16 +109,16 @@ const index = () => {
           </strong>
         </div>
         <div className="w-full">
-          <button
-            onClick={() => setShowModal(true)}
+          <NavLink
+            to="/cart"
             disabled={order.length == 0}
             className="bg-orange-400 font-medium text-white hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-lg"
           >
             Charge $ {total == null ? "0" : total}
-          </button>
+          </NavLink>
         </div>
       </div>
-      <Modal prop={showModal} setShow={setShowModal} />
+      {/* <Modal prop={showModal} setShow={setShowModal} /> */}
     </>
   );
 };
