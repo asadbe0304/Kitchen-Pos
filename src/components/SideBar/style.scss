@@ -98,7 +98,14 @@
     width: 80%!important;
 }
 }
-
+@media screen and (max-width:560px) {
+  .modal{
+    margin-left: 0px;
+  margin-right: 0;
+  margin-top: 0!important;
+  margin-bottom: 80px!important;
+  }
+}
 @media screen and (max-width:430px) {
   .sidebar{
     transform: translateY(-100%);

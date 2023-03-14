@@ -11,28 +11,27 @@
   z-index: 444;
   background: var(--card);
 }
-.active{
+.active {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: orange;
-
 }
-.nav-list{
+.nav-list {
   padding-top: 100px;
   overflow-y: scroll;
   height: 500px;
 }
-.item{
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--title);
 }
-.nav-title{
-  color: var(--title)
+.nav-title {
+  color: var(--title);
 }
 .nav-item {
   font-size: 12px;
@@ -78,6 +77,11 @@
   .nav-item:hover {
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .nav-list {
+    height: 100px !important;
   }
 }
 @media screen and (max-width: 480px) {
