@@ -6,11 +6,11 @@ export const sumOrder = (order) => {
 
   let ordercount = order.reduce((totals, order) => totals + order.quantity, 0);
   let ordertotal = order
-  .reduce((totals, order) => totals + order.price * order.quantity, 0)
-  .toFixed(2);
-  let orderCount = localStorage.setItem("Count", ordercount)
-  let totals = localStorage.setItem("totals", ordertotal)
-  return { ordercount, totals};
+    .reduce((totals, order) => totals + order.price * order.quantity, 0)
+    .toFixed(2);
+  let orderCount = localStorage.setItem("Count", ordercount);
+  let totals = localStorage.setItem("totals", ordertotal);
+  return { ordercount, totals };
 };
 export const reducers = (state, action) => {
   switch (action.type) {
@@ -49,7 +49,11 @@ export const reducers = (state, action) => {
         ...sumOrder(state.order),
         order: [...state.order],
       };
-
+    case "CLEAR":
+      return {
+        ...state,
+        order: [],
+      };
     case "DECREASE":
       state.order[state.order.findIndex((e) => e.id === action.payload.id)]
         .quantity--;

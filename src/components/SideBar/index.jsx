@@ -19,6 +19,7 @@ const index = () => {
   }, [orderOpen]);
   let total = localStorage.getItem("totals");
   let ordercount = localStorage.getItem("Count");
+  console.log(total);
   return (
     <>
       <div
@@ -108,15 +109,16 @@ const index = () => {
         <div className="sub-total flex items-center justify-between my-4 border-t p-2 w-full">
           <h5 className="font-medium nav-title ">SubTotal :</h5>
           <strong className="sub-price nav-title">
-            $ { total}
+            ${total == null ? "0" : total}
           </strong>
         </div>
-        <div
-          onClick={() => setShowModal(true)}
-          className="bg-orange-400 hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-xl"
-        >
-          <button className="text-white font-medium cursor-pointer">
-            Charge $ {total}
+        <div className="w-full">
+          <button
+            onClick={() => setShowModal(true)}
+            disabled={order.length == 0}
+            className="bg-orange-400 font-medium text-white hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-lg"
+          >
+            Charge $ {total == null ? "0" : total}
           </button>
         </div>
       </div>
