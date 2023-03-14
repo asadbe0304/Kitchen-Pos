@@ -4,11 +4,13 @@ const StorageOrder = (order) => {
 export const sumOrder = (order) => {
   StorageOrder(order);
 
-  let orderCount = order.reduce((totals, order) => totals + order.quantity, 0);
-  let totals = order
-    .reduce((totals, order) => totals + order.price * order.quantity, 0)
-    .toFixed(2);
-  return { orderCount, totals };
+  let ordercount = order.reduce((totals, order) => totals + order.quantity, 0);
+  let ordertotal = order
+  .reduce((totals, order) => totals + order.price * order.quantity, 0)
+  .toFixed(2);
+  let orderCount = localStorage.setItem("Count", ordercount)
+  let totals = localStorage.setItem("totals", ordertotal)
+  return { ordercount, totals};
 };
 export const reducers = (state, action) => {
   switch (action.type) {

@@ -9,7 +9,7 @@ import Modal from "./modalOrder";
 const index = () => {
   const [showModal, setShowModal] = useState(false);
   const {
-    state: { orderOpen, order, totals, orderCount },
+    state: { orderOpen, order },
     dispatch,
   } = useOrder();
 
@@ -17,6 +17,8 @@ const index = () => {
     const body = document.querySelector("body");
     body.style.overflow = orderOpen ? "hidden" : "auto";
   }, [orderOpen]);
+  let total = localStorage.getItem("totals");
+  let ordercount = localStorage.getItem("Count");
   return (
     <>
       <div
@@ -31,7 +33,9 @@ const index = () => {
         }`}
       >
         <div className="w-full flex items-center justify-between">
-          <h4 className="font-medium text-2xl nav-title">Order Menu </h4>
+          <h4 className="font-medium text-2xl nav-title">
+            Order Menu {ordercount}{" "}
+          </h4>
 
           <div className="flex items-center gap-2 justify-between">
             <img src={Edit} alt="images" width={20} height={20} />
@@ -104,7 +108,7 @@ const index = () => {
         <div className="sub-total flex items-center justify-between my-4 border-t p-2 w-full">
           <h5 className="font-medium nav-title ">SubTotal :</h5>
           <strong className="sub-price nav-title">
-            $ {totals == undefined ? 0 : totals}
+            $ { total}
           </strong>
         </div>
         <div
@@ -112,8 +116,7 @@ const index = () => {
           className="bg-orange-400 hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-xl"
         >
           <button className="text-white font-medium cursor-pointer">
-            {" "}
-            Charge $ {totals}{" "}
+            Charge $ {total}
           </button>
         </div>
       </div>

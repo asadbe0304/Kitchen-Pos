@@ -5,9 +5,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Modal({ prop, setShow }) {
   const {
-    state: { order, totals },
+    state: { order },
   } = useOrder();
-  const [difference, setDifference] = useState();
+  const [difference, setDifference] = useState(0);
   const notify = () => {
     setDifference("");
     toast.success("Wow Success!"),
@@ -18,7 +18,8 @@ export default function Modal({ prop, setShow }) {
         draggable: true,
       };
   };
-  console.log(difference);
+  let total = localStorage.getItem("totals");
+  let ordercount = localStorage.getItem("Count");
   return (
     <>
       {prop ? (
@@ -41,7 +42,7 @@ export default function Modal({ prop, setShow }) {
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">Your Orders </h3>
+                  <h3 className="text-3xl font-semibold">Your Orders {ordercount}</h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
@@ -98,7 +99,7 @@ export default function Modal({ prop, setShow }) {
                       <div className="flex items-start justify-between my-2 border-b-2 font-medium nav-title p-3">
                         Total:
                         <p className="total-check bg-red-400 p-2 text-white rounded-md">
-                          $ {totals}
+                          $ {total}
                         </p>
                       </div>
                       <div className="flex items-start justify-between gap-1 px-3">
@@ -120,7 +121,7 @@ export default function Modal({ prop, setShow }) {
                           Difference
                           <span className="text-red-400 font-medium ">
                             {" "}
-                            {(totals - difference).toFixed(1)}$
+                            {(total - difference).toFixed(1)}$
                           </span>
                         </div>
                       </div>
