@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useOrder } from "../../context/context";
 
 export default function Modal({ prop, setShow }) {
   const {
     state: { order, totals },
   } = useOrder();
-  console.log(order);
+  const [difference, setDifference] = useState();
+
   return (
     <>
       {prop ? (
@@ -25,9 +26,9 @@ export default function Modal({ prop, setShow }) {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="flex items-start justify-between w-full">
+                <div className="flex items-start order-check justify-between w-full">
                   <div
-                    className="overflow-y-scroll w-1/2"
+                    className="overflow-y-scroll checkout-left w-1/2"
                     style={{ height: "500px" }}
                   >
                     {order.length > 0
@@ -58,7 +59,7 @@ export default function Modal({ prop, setShow }) {
                       : "Not order"}
                   </div>
                   <div className="checkout mt-2 mx-auto flex-col w-1/2  flex items-center justify-center">
-                    <div className="checkout-order-btn w-1/2">
+                    <div className="checkout-order-btn w-full flex items-center justify-center">
                       <button className="hover:bg-orange-400 border-orange-400 border py-1 px-3 rounded-md">
                         Terminal
                       </button>
@@ -73,7 +74,7 @@ export default function Modal({ prop, setShow }) {
                       <div className="flex items-start justify-between my-2 border-b-2 font-medium nav-title p-3">
                         Total:
                         <p className="total-check bg-red-400 p-2 text-white rounded-md">
-                         $ {totals}
+                          $ {totals}
                         </p>
                       </div>
                       <div className="flex items-start justify-between gap-1 px-3">

@@ -74,6 +74,22 @@
     animation: smooth 0.5s both;
   }
 }
+@media screen and (max-width:950px) {
+  .order-check{
+    flex-direction: column!important;
+  }
+  .checkout-order-btn{
+    padding-top: 10px;
+    border-top:1px solid gray!important ;
+  }
+  .checkout{
+    width: 100%!important;
+  }
+  .checkout-left{
+    width: 100%!important;
+  }
+  
+}
 @media screen and (max-width:630px) {
   .sidebar{
     transform: translateY(-100%);
