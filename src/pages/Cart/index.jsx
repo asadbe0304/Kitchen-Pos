@@ -62,7 +62,7 @@ export default function Modal() {
             <div className="flex items-start order-check justify-between w-full">
               <div
                 className="overflow-y-scroll checkout-left w-1/2"
-                style={{ height: "500px" }}
+                style={{ height: "400px" }}
               >
                 {order.length > 0
                   ? order.map((e) => {
