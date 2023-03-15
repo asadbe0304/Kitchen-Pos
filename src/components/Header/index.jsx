@@ -7,7 +7,9 @@ import Cart from "./../../assets/svg/shopping-cart.svg";
 import { useOrder } from "../../context/context";
 import "./style.scss";
 import Notif from "./notif";
+import Inbox from "./inbox";
 const index = () => {
+  const [inbox, setInbox] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
     if (theme === "dark") {
@@ -63,7 +65,10 @@ const index = () => {
                 <MdNightlight className=" notif nav-title" />
               )}
             </div>
-            <MdNotifications className="notif nav-title " />
+            <MdNotifications
+              className="notif nav-title "
+              onClick={() => setInbox((e) => !e)}
+            />
             <div
               className="relative cart-order"
               onClick={() => dispatch({ type: "ORDER__CART", payload: true })}
@@ -83,6 +88,7 @@ const index = () => {
                 dispatch({ type: "PROFILE", payload: profile ? false : true })
               }
             />
+            <Inbox prop={inbox} setInbox={setInbox} />
             <Notif theme={theme} toggleTheme={toggleTheme} />
           </div>
         </div>
