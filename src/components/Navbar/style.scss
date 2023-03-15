@@ -51,6 +51,8 @@
     z-index: 445;
     display: flex;
     // top: 93%;
+    border-bottom-right-radius:0px!important;
+    border-bottom-left-radius: 0px!important;
     flex-direction: row !important;
     align-items: center;
     .nav-list {
