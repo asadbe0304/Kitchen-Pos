@@ -7,6 +7,9 @@
     transition: all 0.3s ease-in-out;
   }
 }
+.sidebar{
+  top: 80px;
+}
 .modal{
   margin-left: 120px;
   margin-right: 20px;
@@ -37,7 +40,7 @@
   // justify-content:end ;
   // height: 100vh!important;
   opacity: 0.9;
-  transform: translateY(-120%);
+  transform: translateY(-150%);
   filter: blur(5px);
 }
 .order-item{
@@ -50,7 +53,7 @@
 }
 @keyframes smooth {
   0%{
-    transform: translateY(-100%);
+    transform: translateY(-150%);
   }
   100%{
     transform: translateY(0%);
@@ -61,18 +64,16 @@
     width: 20rem !important;
   }
 }
-@media screen and (max-width:1180px) {
-  .sidebar{
-    width: 18rem !important;
-  }
-}
+
 @media screen and (max-width:1050px) {
   .sidebar{
-      transform: translateY(-100%);
+      transform: translateY(-150%);
       width: 50%!important;
+      top: 0!important;
   }
   .show{
-    transform: translateY(-100%)!important;
+    top: 0!important;
+    transform: translateY(-150%)!important;
     animation: smooth 0.5s both;
   }
 }
@@ -94,7 +95,7 @@
 }
 @media screen and (max-width:630px) {
   .sidebar{
-    transform: translateY(-100%);
+    transform: translateY(-150%);
     width: 80%!important;
 }
 }
@@ -108,7 +109,7 @@
 }
 @media screen and (max-width:430px) {
   .sidebar{
-    transform: translateY(-100%);
+    transform: translateY(-150%);
     width: 90%!important;
 }
 }

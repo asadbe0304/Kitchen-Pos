@@ -8,6 +8,8 @@
 .navbar {
   position: fixed;
   bottom: 0;
+  top: 80px;
+  border-radius: 10px;
   z-index: 444;
   background: var(--card);
 }
@@ -19,7 +21,7 @@
   color: orange;
 }
 .nav-list {
-  padding-top: 100px;
+  padding-top: 50px;
   overflow-y: scroll;
   height: 500px;
 }
@@ -45,9 +47,10 @@
     width: 100% !important;
     bottom: 0% !important;
     padding: 0px 0px !important;
-    height: 70px !important;
+    height: 80px !important;
     z-index: 445;
     display: flex;
+    top: 93%;
     flex-direction: row !important;
     align-items: center;
     .nav-list {
@@ -81,7 +84,7 @@
 }
 @media screen and (max-width: 560px) {
   .nav-list {
-    height: 100px !important;
+    height: 80px !important;
   }
 }
 @media screen and (max-width: 480px) {

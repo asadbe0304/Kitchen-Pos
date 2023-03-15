@@ -1,6 +1,7 @@
 .header {
-  margin: 0px 310px 0px 90px;
-  width: 64%;
+  // margin: 0px 310px 0px 90px;
+  width: 100%;
+  // padding: 0!important;
   background: var(--card);
 }
 .profile {
@@ -44,7 +45,7 @@
     display: block;
   }
   .header {
-    width: 90%;
+    width: 100%;
   }
 }
 .notif {

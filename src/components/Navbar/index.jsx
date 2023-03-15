@@ -6,7 +6,7 @@ import List from "./list";
 import "./style.scss";
 const index = () => {
   return (
-    <div className="w-24 navbar shadow-2xl h-full p-1 flex flex-col items-center justify-between">
+    <div className="w-24 navbar shadow-2xl h-full p-1 flex flex-col items-center gap-2 justify-start">
       <Logo />
       <List />
       <NavLink

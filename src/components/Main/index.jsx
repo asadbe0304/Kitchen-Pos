@@ -18,7 +18,7 @@ const index = () => {
       <SideBar />
       <div className="site-main scroll-smooth mb-20">
         <div className="container">
-          <div className="category-order flex items-start justify-between flex-col p-3">
+          <div className="category-order pt-20 flex items-start justify-between flex-col p-3">
             <h3 className="text-2xl font-medium category-title">
               Menu <span className="text-slate-600">Category</span>
             </h3>
