@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const index = () => {
+
   return (
     <>
       <div className="container">
         <div className="form rounded-lg mt-10 p-4 px-10 mx-52">
           <div className="w-full flex mt-14 mx-auto">
-            <h2 className="font-medium text-2xl nav-title">Register Account </h2>
+            <h2 className="font-medium text-2xl nav-title">
+              Register Account
+            </h2>
           </div>
           <form className="my-5">
             <label className="block my-4">

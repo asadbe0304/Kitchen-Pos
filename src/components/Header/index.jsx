@@ -20,7 +20,7 @@ const index = () => {
     localStorage.setItem("theme", theme);
     document.body.className = theme;
   }, [theme]);
-
+let local = localStorage.getItem("user")
   const {
     state: { profile, order },
     dispatch,
@@ -89,7 +89,7 @@ const index = () => {
                 profile ? "block" : "hidden"
               }`}
             >
-              <h2 className="font-medium nav-title"> Hi Admin </h2>
+              <h2 className="font-medium nav-title"> Hi {local} </h2>
               <ul className="list-none flex flex-col items-start gap-3 border-t-2">
                 <NavLink
                   to={"/profile"}
