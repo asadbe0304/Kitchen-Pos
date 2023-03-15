@@ -49,7 +49,7 @@ export default function Modal() {
         pauseOnHover
         theme="dark"
       />
-      <div className="justify-center mt-8 mb-10 modal items-center flex inset-0 outline-none focus:outline-none">
+      <div className="justify-center mt-8 mb-10 pt-20 modal items-center flex inset-0 outline-none focus:outline-none">
         <div className=" w-full mx-auto">
           <div className="border-0 shadow-lg flex rounded-md flex-col w-full bg-white outline-none focus:outline-none">
             {/*header*/}

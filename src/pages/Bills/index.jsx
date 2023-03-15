@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "./../../components/Header";
 
 const index = () => {
   return (
     <>
-      <Header />/
-      <div>
+      <div className="pt-20">
         <h2>Bills pages</h2>
       </div>
     </>

@@ -7,8 +7,8 @@
 }
 .navbar {
   position: fixed;
-  bottom: 0;
-  top: 80px;
+  bottom: -80px;
+  // top: 80px;/
   border-radius: 10px;
   z-index: 444;
   background: var(--card);
@@ -50,7 +50,7 @@
     height: 80px !important;
     z-index: 445;
     display: flex;
-    top: 93%;
+    // top: 93%;
     flex-direction: row !important;
     align-items: center;
     .nav-list {

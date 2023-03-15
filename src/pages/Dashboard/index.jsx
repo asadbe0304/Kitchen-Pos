@@ -12,7 +12,7 @@ const index = () => {
       {/* <Header /> */}
       <div className="dashboard">
         <div className="container">
-          <div className="dashboard-invoices">
+          <div className="dashboard-invoices pt-20">
             <Analytic />
             <div className="w-full dashboard-graphics flex flex-col items-start justify-between gap-2 px-3 mt-8 mb-20">
               <div className="w-full flex items-start justify-between gap-2 latest-action">

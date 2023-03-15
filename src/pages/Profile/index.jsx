@@ -6,7 +6,7 @@ const index = () => {
   let user = localStorage.getItem("user");
   return (
     <>
-      <div className="profile-page">
+      <div className="profile-page pt-20">
         <section className="relative block py-16 ">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"

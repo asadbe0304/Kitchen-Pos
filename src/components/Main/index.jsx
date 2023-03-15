@@ -14,7 +14,7 @@ const index = () => {
   } = useOrder();
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <SideBar />
       <div className="site-main scroll-smooth mb-20">
         <div className="container">
