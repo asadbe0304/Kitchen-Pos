@@ -13,9 +13,9 @@ export default function Modal() {
   let ordercount = localStorage.getItem("Count");
   const [difference, setDifference] = useState(0);
   const navigate = useNavigate();
-  const back = ()=>{
-    navigate("/")
-  }
+  const back = () => {
+    navigate("/");
+  };
   const notify = () => {
     toast.success("Wow Success!"),
       {
@@ -49,17 +49,15 @@ export default function Modal() {
         pauseOnHover
         theme="dark"
       />
-      <div className="justify-center mt-8 mb-10 pt-20 modal items-center flex inset-0 outline-none focus:outline-none">
-        <div className=" w-full mx-auto">
-          <div className="border-0 shadow-lg flex rounded-md flex-col w-full bg-white outline-none focus:outline-none">
-            {/*header*/}
-            <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 ">
-              <h3 className="text-3xl font-semibold">
+      <div className="justify-center mt-8 pb-20 pt-24 px-2 rounded-md modal items-center flex inset-0 outline-none focus:outline-none">
+        <div className=" w-full cart-page mx-auto rounded-md">
+          <div className="border-0 cart-page shadow-lg flex rounded-md flex-col w-full outline-none focus:outline-none">
+              <h3 className="text-3xl my-4 mx-4 nav-title font-semibold">
                 Your Orders {ordercount}
               </h3>
             </div>
             {/*body*/}
-            <div className="flex items-start order-check justify-between w-full">
+            <div className="flex items-start px-3 cart-page order-check justify-between w-full">
               <div
                 className="overflow-y-scroll checkout-left w-1/2"
                 style={{ height: "400px" }}
@@ -68,21 +66,23 @@ export default function Modal() {
                   ? order.map((e) => {
                       return (
                         <div
+                          style={{ background: "var(--order)" }}
                           key={e.id}
                           className="flex items-center border rounded-md w-full justify-between p-2 flex-auto"
                         >
                           <img
                             src={e.images}
                             alt="images"
+                            className="rounded-full"
                             width={80}
                             height={80}
                           />
-                          <p className="my-4 text-black text-lg leading-relaxed">
+                          <p className="my-4 nav-title text-lg leading-relaxed">
                             {e.name}
                           </p>
                           <p className="flex gap-2 mx-2 m-0 p-0 nav-title items-center font-medium justify-between">
                             x{e.quantity}
-                            <span className="text-slate-400 font-medium">
+                            <span className="nav-title font-medium">
                               ${(e.price * e.quantity).toFixed(1)}
                             </span>
                           </p>
@@ -91,15 +91,17 @@ export default function Modal() {
                     })
                   : "Not order"}
               </div>
-              <div className="checkout mt-2 mx-auto flex-col w-1/2  flex items-center justify-center">
+              <div
+                className="checkout mt-2 mx-auto flex-col w-1/2  flex items-center justify-center"
+              >
                 <div className="checkout-order-btn w-full flex items-center justify-center">
-                  <button className="hover:bg-orange-400 border-orange-400 border py-1 px-3 rounded-md">
+                  <button className="hover:bg-orange-400 nav-title border-orange-400 border py-1 px-3 rounded-md">
                     Terminal
                   </button>
-                  <button className="border-orange-400 border py-1 px-3 rounded-md hover:bg-orange-400 transition-all duration-300">
+                  <button className="border-orange-400 border py-1 px-3 rounded-md hover:bg-orange-400 nav-title transition-all duration-300">
                     Cash
                   </button>
-                  <button className="hover:bg-orange-400 border-orange-400 border py-1 px-3 rounded-md">
+                  <button className="hover:bg-orange-400 nav-title border-orange-400 border py-1 px-3 rounded-md">
                     Payme/Click
                   </button>
                 </div>
@@ -113,22 +115,23 @@ export default function Modal() {
                   <div className="flex items-start justify-between gap-1 px-3">
                     <label
                       htmlFor="check"
-                      className="flex flex-col items-start justify-between"
+                      className="flex flex-col items-start nav-title justify-between"
                     >
                       Cash:
                       <input
                         type="number"
                         id="check"
+                        style={{ background: "var(--order)" }}
                         value={difference}
                         onChange={(e) => setDifference(e.target.value)}
                         placeholder="100$"
-                        className="check-input border-b-2 outline-none border-b-black py-2 my-2 px-2"
+                        className="check-input rounded-md border-b-2 outline-none border-b-black py-2 my-2 px-2"
                       />
                     </label>
-                    <div className="check-difference ml-2 flex flex-col items-start">
+                    <div className="check-difference ml-2 nav-title flex flex-col items-start">
                       Difference
                       <span className="text-red-400 font-medium ">
-                        {" "}
+                    
                         {(total - difference).toFixed(1)}$
                       </span>
                     </div>
@@ -137,7 +140,7 @@ export default function Modal() {
               </div>
             </div>
             {/*footer*/}
-            <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+            <div className="flex items-center cart-page justify-end p-6 border-t border-solid border-slate-200 rounded-b">
               <button
                 className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
@@ -156,7 +159,6 @@ export default function Modal() {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }
