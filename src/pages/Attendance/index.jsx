@@ -17,7 +17,7 @@ const index = () => {
   return (
     <>
       <div className="container">
-        <div className="attendance pt-24 shadow-2xl w-3/4 mx-24 mt-6 p-6 rounded-lg">
+        <div className="attendance  shadow-2xl w-3/4 mx-24 mt-32 p-6 rounded-lg">
           <div className="attendance-track nav-title">
             <h3 className="nav-title text-lg">Worker Attendance Track</h3>
           </div>

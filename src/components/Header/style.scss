@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-z-index: 234445;
+z-index: 2345;
   background: var(--card);
 }
 .profile {
@@ -10,7 +10,7 @@ z-index: 234445;
   z-index: 4;
   padding: 20px;
   width: 200px;
-  height: 150px;
+  height: 250px;
   background: var(--card);
   border-radius: 10px;
   ul{
@@ -29,11 +29,15 @@ z-index: 234445;
    transform: rotate(50deg);
   }
 }
+
 .search-input{
   background: var(--order);
 }
 .cart-order {
   display: none;
+}
+.profile-menu{
+height: 100%;
 }
 .count-order {
   top: -13px;

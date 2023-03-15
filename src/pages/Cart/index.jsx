@@ -105,14 +105,14 @@ export default function Modal() {
                     Payme/Click
                   </button>
                 </div>
-                <div className="calculator w-full border-t-2 my-2 px-2">
+                <div className="calculator w-full border-t-2 my-2 p-0">
                   <div className="flex items-start justify-between my-2 border-b-2 font-medium nav-title p-3">
                     Total:
                     <p className="total-check bg-red-400 p-2 text-white rounded-md">
                       $ {total}
                     </p>
                   </div>
-                  <div className="flex items-start justify-between gap-1 px-3">
+                  <div className="flex items-start justify-between gap-1 p-0">
                     <label
                       htmlFor="check"
                       className="flex flex-col items-start nav-title justify-between"
@@ -140,9 +140,9 @@ export default function Modal() {
               </div>
             </div>
             {/*footer*/}
-            <div className="flex items-center cart-page justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+            <div className="flex items-center cart-page justify-between py-6 px-2 border-t border-solid border-slate-200 rounded-b">
               <button
-                className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="nav-title bg-orange-400 font-bold uppercase px-4 rounded-md py-3 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
                 type="button"
                 onClick={() => navigate("/")}
               >
@@ -150,7 +150,7 @@ export default function Modal() {
               </button>
               <button
                 disabled={difference === 0}
-                className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-4 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150"
                 type="button"
                 onClick={notify}
               >

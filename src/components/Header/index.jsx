@@ -20,7 +20,7 @@ const index = () => {
     localStorage.setItem("theme", theme);
     document.body.className = theme;
   }, [theme]);
-let local = localStorage.getItem("user")
+  let local = localStorage.getItem("user");
   const {
     state: { profile, order },
     dispatch,
@@ -90,21 +90,31 @@ let local = localStorage.getItem("user")
               }`}
             >
               <h2 className="font-medium nav-title"> Hi {local} </h2>
-              <ul className="list-none flex flex-col items-start gap-3 border-t-2">
-                <NavLink
-                  to={"/profile"}
-                  className="nav-title font-medium text-md"
-                >
-                  Profile
-                </NavLink>
+              <ul className="list-none flex flex-col profile-menu items-start gap-3 my-2 pt-2 border-t-2">
+                <li className="nav-title profile-title font-medium text-md">
+                  <NavLink
+                    to="/profile"
+                    className="nav-title font-medium text-md"
+                  >
+                    Profile
+                  </NavLink>
+                </li>
+                <li className="nav-title hover:bg-black profile-title font-medium text-md">
+                  <NavLink to="/" className="nav-title font-medium text-md">
+                    Log Out
+                  </NavLink>
+                </li>
+
                 <li
-                  className="nav-title font-medium text-md"
+                  className="nav-title profile-title font-medium text-md"
                   onClick={() => toggleTheme()}
                 >
                   {theme === "dark" ? "Light theme" : "Dark theme"}
                   {/* Theme */}
                 </li>
-                <li className="nav-title font-medium text-md">Language</li>
+                <li className="nav-title profile-title font-medium text-md">
+                  Language
+                </li>
               </ul>
               <div className="triang "></div>
             </div>
