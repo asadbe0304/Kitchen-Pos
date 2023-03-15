@@ -26,7 +26,7 @@ export default function Modal() {
       };
     setDifference("");
     setTimeout(() => {
-      navigate("/");
+      navigate("/home");
     }, 1000);
     setTimeout(() => {
       dispatch({ type: "ORDER__CART" });

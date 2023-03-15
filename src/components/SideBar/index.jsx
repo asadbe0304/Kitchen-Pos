@@ -20,10 +20,10 @@ const index = () => {
   const navigator = useNavigate();
   const path = () => {
     order.length === 0
-      ? toast.error("You need to choose a product",{
-        position:"top-center",
-        autoClose: 2000,
-      })
+      ? toast.error("You need to choose a product", {
+          position: "top-center",
+          autoClose: 2000,
+        })
       : navigator("/cart");
   };
   return (

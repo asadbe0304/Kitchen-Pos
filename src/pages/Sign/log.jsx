@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./style.scss";
+import Img from "./../../assets/img/logo.png";
 import { toast } from "react-toastify";
 
 const log = () => {
@@ -26,9 +27,18 @@ const log = () => {
   return (
     <>
       <div className="container">
-        <div className="form flex justify-center flex-col items-center p-0 rounded-lg sign">
-          <div className="w-1/2 flex mt-14 mx-auto">
-            <h2 className="font-medium text-2xl nav-title">Login Account </h2>
+        <div className="form flex justify-start flex-col items-center p-0 rounded-lg sign">
+          <div className="w-1/2 my-6 flex mt-14 item-center justify-center">
+            <img src={Img} alt="" />
+          </div>
+          <div className="flex justify-center items-center flex-col">
+            <h2 className="font-bold text-3xl nav-title">Welcome to SAC</h2>
+            <p className="nav-title font-medium w-3/3 px-3 lg:w-1/2 md:w-2/3 text-center mt-4">
+              All-in-One POS and Restaurant Management System <br /> Our
+              restaurant POS software comes equipped with all of the features
+              you need to streamline your operations and boost your profit
+              margin.
+            </p>
           </div>
           <form className="w-1/2 my-5">
             <label className="block my-4">

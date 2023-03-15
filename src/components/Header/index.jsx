@@ -6,7 +6,7 @@ import { MdNotifications, MdWbSunny, MdNightlight } from "react-icons/md";
 import Cart from "./../../assets/svg/shopping-cart.svg";
 import { useOrder } from "../../context/context";
 import "./style.scss";
-import { NavLink } from "react-router-dom";
+import Notif from "./notif";
 const index = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
@@ -20,7 +20,6 @@ const index = () => {
     localStorage.setItem("theme", theme);
     document.body.className = theme;
   }, [theme]);
-  let local = localStorage.getItem("user");
   const {
     state: { profile, order },
     dispatch,
@@ -84,40 +83,7 @@ const index = () => {
                 dispatch({ type: "PROFILE", payload: profile ? false : true })
               }
             />
-            <div
-              className={`profile shadow-black shadow-md flex flex-col items-start  border-red-300 ${
-                profile ? "block" : "hidden"
-              }`}
-            >
-              <h2 className="font-medium nav-title"> Hi {local} </h2>
-              <ul className="list-none flex flex-col profile-menu items-start gap-3 my-2 pt-2 border-t-2">
-                <li className="nav-title profile-title font-medium text-md">
-                  <NavLink
-                    to="/profile"
-                    className="nav-title font-medium text-md"
-                  >
-                    Profile
-                  </NavLink>
-                </li>
-                <li className="nav-title hover:bg-black profile-title font-medium text-md">
-                  <NavLink to="/" className="nav-title font-medium text-md">
-                    Log Out
-                  </NavLink>
-                </li>
-
-                <li
-                  className="nav-title profile-title font-medium text-md"
-                  onClick={() => toggleTheme()}
-                >
-                  {theme === "dark" ? "Light theme" : "Dark theme"}
-                  {/* Theme */}
-                </li>
-                <li className="nav-title profile-title font-medium text-md">
-                  Language
-                </li>
-              </ul>
-              <div className="triang "></div>
-            </div>
+            <Notif theme={theme} toggleTheme={toggleTheme} />
           </div>
         </div>
       </div>

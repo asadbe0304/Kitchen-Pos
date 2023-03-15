@@ -4,8 +4,7 @@ import Header from "./../../components/Header";
 const index = () => {
   return (
     <>
-      <Header />
-      <div>
+      <div className="pt-20">
         <h2>Settings</h2>
       </div>
     </>
