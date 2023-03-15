@@ -1,20 +1,36 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "./style.scss"
+import { NavLink, useNavigate } from "react-router-dom";
+import "./style.scss";
+import { toast } from "react-toastify";
 
 const log = () => {
   const [user, setUser] = useState();
   const [pass, setPass] = useState();
 
   let userLocal = localStorage.setItem("user", user);
+
+  const Navigate = useNavigate();
+
+  const handles = () => {
+    if (!user.length == 0 && !pass.length == 0) {
+      Navigate("/home");
+      toast.success(`You have successfully logged`, {
+        position: "bottom-center",
+      });
+    } else {
+      toast.error("You have not logged in", {
+        position: "bottom-center",
+      });
+    }
+  };
   return (
     <>
       <div className="container">
-        <div className="form mx-52 p-4 px-10 rounded-lg mt-10 sign">
-          <div className="w-full flex mt-14 mx-auto">
+        <div className="form flex justify-center flex-col items-center p-0 rounded-lg sign">
+          <div className="w-1/2 flex mt-14 mx-auto">
             <h2 className="font-medium text-2xl nav-title">Login Account </h2>
           </div>
-          <form className=" my-5">
+          <form className="w-1/2 my-5">
             <label className="block my-4">
               <span className="block text-md font-medium nav-title">
                 Username
@@ -50,12 +66,13 @@ const log = () => {
               />
             </label>
 
-            <NavLink to="/"
-              type="button"
+            <button
+              // to="/home"
+              onClick={handles}
               className="nav-title font-medium bg-red-500 rounded-2xl px-3 py-1 hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-300"
             >
               Login Account
-            </NavLink>
+            </button>
           </form>
         </div>
       </div>

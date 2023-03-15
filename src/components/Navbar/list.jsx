@@ -11,7 +11,7 @@ const list = () => {
       <ul className="flex flex-col nav-list list-none gap-3 items-center justify-center w-full">
         <li className="flex flex-col items-center gap-1 p-4 rounded-2xl nav-item justify-center">
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) => (isActive ? "active" : "item")}
           >
             <AiFillHome width={30} height={30} />

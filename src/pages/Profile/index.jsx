@@ -3,6 +3,7 @@ import "./style.scss";
 import Img from "./.././../assets/img/2.jpg";
 
 const index = () => {
+  let user = localStorage.getItem("user");
   return (
     <>
       <div className="profile-page">
@@ -85,7 +86,7 @@ const index = () => {
                           89
                         </span>
                         <span className="text-sm text-blueGray-400">
-                          Master
+                          Manager
                         </span>
                       </div>
                     </div>
@@ -93,16 +94,13 @@ const index = () => {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal text-gray-700 mb-2">
-                    Asadbek
+                    {user}
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-gray-400 font-bold uppercase">
-                    Uzbekistan, Andhijan
+                    WELCOME to system
                   </div>
                   <div className="mb-2 text-gray-600 mt-10">
-                    CEO Manager - Creative Tim Officer
-                  </div>
-                  <div className="mb-2 text-gray-600">
-                    University of Computer Science
+                    Creative Tim Officer
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-200 text-center">

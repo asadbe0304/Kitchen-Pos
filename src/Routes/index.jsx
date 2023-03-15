@@ -10,17 +10,18 @@ import { Route, Routes } from "react-router-dom";
 import Track from "./../pages/Attendance";
 import Profile from "./../pages/Profile";
 import Cart from "./../pages/Cart";
-
+import Layout from "../layout/Layout";
 const index = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Sign />} />
+        <Route path="/home" element={<Main />} />
         <Route path="/dash" element={<DashBoard />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/bills" element={<Bills />} />
         <Route path="/logout" element={<Logout />} />
-        <Route path="/sign" element={<Sign />} />
+        {/* <Route path="/sign" element={<Sign />} /> */}
         <Route path="/track" element={<Track />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />

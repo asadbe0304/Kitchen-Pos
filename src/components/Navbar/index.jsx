@@ -10,7 +10,7 @@ const index = () => {
       <Logo />
       <List />
       <NavLink
-        to="/logout"
+        to="/"
         className="btn btn-log nav-title flex font-medium gap-1 mb-3 flex-col items-center justify-center"
       >
         <RiLogoutCircleRFill width={25} height={25} />
