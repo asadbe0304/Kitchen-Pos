@@ -1,7 +1,9 @@
 import React from "react";
 import "./style.scss";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Webcam from "react-webcam";
+// import { ImClock, ImCloudCheck } from "react-icons/im";
+import { BsClock } from "react-icons/bs";
 import { Input } from "postcss";
 const index = () => {
   const [input, setInput] = useState();
@@ -14,6 +16,9 @@ const index = () => {
   const videoConstraints = () => {
     facingMode: "user";
   };
+  let local = localStorage.getItem("user");
+  const [data, setDateState] = useState(new Date());
+  
   return (
     <>
       <div className="container">
@@ -42,7 +47,7 @@ const index = () => {
                   <input
                     type="text"
                     required
-                    value={input}
+                    value={local}
                     onChange={(e) => setInput(e.target.value)}
                     id="userName"
                     placeholder="Please your User name"
@@ -60,14 +65,34 @@ const index = () => {
               {imgSrc && (
                 <div className="video-tracker">
                   <div className="track-time border rounded-md p-2 mt-5 flex items-start justify-between gap-3">
-                    <img
-                      className="camera-screen-img  rounded-full m-0"
-                      src={imgSrc}
-                    />
+                    <div className="flex items-start justify-start gap-3">
+                      <img
+                        className="camera-screen-img  rounded-full m-0"
+                        src={imgSrc}
+                      />
+                      <div className="flex flex-col item-start gap-2">
+                        <h4>{local}</h4>
+                        <p className="nav-title font-medium text-sm">
+                          ID: <span>1234</span>
+                        </p>
+                      </div>
+                    </div>
                     <div className="flex items-start gap-3 justify-between m-0 p-0">
-                      <h4>{input}</h4>
-                      <span className="time-start">00:00</span>
-                      <span className="time-start finally">00:00</span>
+                      <div className="flex items-center gap-2">
+                        <BsClock />
+                        <span className="time-start">
+                          {data.toLocaleDateString("en-US", {
+                            hour: "numeric",
+                            minute: "numeric",
+                            second:"numeric",
+                            hour12: false,
+                          })}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <BsClock />
+                        <span className="time-start finally">00:00</span>
+                      </div>
                     </div>
                   </div>
                 </div>
