@@ -23,6 +23,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   background: var(--body);
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
