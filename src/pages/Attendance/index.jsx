@@ -18,13 +18,14 @@ const index = () => {
   };
   let local = localStorage.getItem("user");
   const [data, setDateState] = useState(new Date());
-  
+
   return (
     <>
       <div className="container">
         <div className="attendance  shadow-2xl w-3/4 mx-24 mt-32 p-6 rounded-lg">
-          <div className="attendance-track nav-title">
-            <h3 className="nav-title text-lg">Worker Attendance Track</h3>
+          <div className="attendance-track flex items-center gap-1 nav-title">
+            <BsClock />
+            <h3 className="nav-title text-lg">Worker Attendance Track time</h3>
           </div>
           <div className="video-track flex items-start gap-6  justify-between w-full">
             {/* <video className="video w-1/2 rounded-md bg-slate-600"></video> */}
@@ -84,7 +85,7 @@ const index = () => {
                           {data.toLocaleDateString("en-US", {
                             hour: "numeric",
                             minute: "numeric",
-                            second:"numeric",
+                            second: "numeric",
                             hour12: false,
                           })}
                         </span>
