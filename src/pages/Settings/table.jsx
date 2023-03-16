@@ -17,7 +17,7 @@ const table = () => {
         </thead>
         <tbody>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Gazi Rahad</td>
+            <td className="p-3 font-medium capitalize">John Doe</td>
             <td className="p-3">gazi.rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">admin</td>
@@ -43,8 +43,8 @@ const table = () => {
             </td>
           </tr>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Arif Uddin</td>
-            <td className="p-3">gazi.rahad871@gmail.com</td>
+            <td className="p-3 font-medium capitalize">Example name</td>
+            <td className="p-3">rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">user</td>
 
@@ -69,8 +69,8 @@ const table = () => {
             </td>
           </tr>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Arif Uddin</td>
-            <td className="p-3">gazi.rahad871@gmail.com</td>
+            <td className="p-3 font-medium capitalize">Example name</td>
+            <td className="p-3">rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">user</td>
 
@@ -95,8 +95,8 @@ const table = () => {
             </td>
           </tr>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Arif Uddin</td>
-            <td className="p-3">gazi.rahad871@gmail.com</td>
+            <td className="p-3 font-medium capitalize">Example name</td>
+            <td className="p-3">rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">user</td>
 
@@ -121,8 +121,8 @@ const table = () => {
             </td>
           </tr>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Arif Uddin</td>
-            <td className="p-3">gazi.rahad871@gmail.com</td>
+            <td className="p-3 font-medium capitalize">Example name</td>
+            <td className="p-3">rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">user</td>
 
@@ -147,8 +147,8 @@ const table = () => {
             </td>
           </tr>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Arif Uddin</td>
-            <td className="p-3">gazi.rahad871@gmail.com</td>
+            <td className="p-3 font-medium capitalize">Example name</td>
+            <td className="p-3">rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">user</td>
 
@@ -173,8 +173,8 @@ const table = () => {
             </td>
           </tr>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Arif Uddin</td>
-            <td className="p-3">gazi.rahad871@gmail.com</td>
+            <td className="p-3 font-medium capitalize">Example name</td>
+            <td className="p-3">rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">user</td>
 
@@ -199,8 +199,8 @@ const table = () => {
             </td>
           </tr>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Arif Uddin</td>
-            <td className="p-3">gazi.rahad871@gmail.com</td>
+            <td className="p-3 font-medium capitalize">Example name</td>
+            <td className="p-3">rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">user</td>
 
@@ -225,8 +225,8 @@ const table = () => {
             </td>
           </tr>
           <tr className="bg-blue-200 lg:text-black">
-            <td className="p-3 font-medium capitalize">Arif Uddin</td>
-            <td className="p-3">gazi.rahad871@gmail.com</td>
+            <td className="p-3 font-medium capitalize">Example name</td>
+            <td className="p-3">rahad871@gmail.com</td>
             <td className="p-3">01648349009</td>
             <td className="p-3 uppercase">user</td>
 

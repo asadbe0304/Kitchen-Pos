@@ -1,7 +1,22 @@
-.settings-table{
+.settings-table {
   width: 60%;
   padding: 30px;
   border-radius: 10px;
-  margin: 0px 50px 0px 120px ;
+  margin: 0px 50px 0px 120px;
   background: var(--card);
+}
+
+@media screen and (max-width: 1020px) {
+  .table {
+    width: 1000px !important;
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 560px) {
+  .settings-table {
+    width: 90%!important;
+    margin: 0px auto;
+    margin-bottom: 80px;
+  }
+
 }
