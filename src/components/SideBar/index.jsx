@@ -45,7 +45,6 @@ const index = () => {
       >
         <div className="w-full flex items-center justify-between">
           <h4 className="font-medium text-2xl nav-title">Order Menu</h4>
-
           <div className="flex items-center gap-2 justify-between">
             <img src={Edit} alt="images" width={20} height={20} />
             <MdClose
@@ -73,8 +72,6 @@ const index = () => {
         <div className="w-full">
           <button
             onClick={path}
-            // to="/cart"
-            // disabled={order.length == 0}
             className="bg-orange-400 font-medium text-white hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-lg"
           >
             Charge $ {total == null ? "0" : total}

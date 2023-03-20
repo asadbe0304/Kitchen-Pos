@@ -2,9 +2,7 @@ import React from "react";
 import "./style.scss";
 import { useState, useRef, useEffect } from "react";
 import Webcam from "react-webcam";
-// import { ImClock, ImCloudCheck } from "react-icons/im";
 import { BsClock } from "react-icons/bs";
-import { Input } from "postcss";
 const index = () => {
   const [input, setInput] = useState();
   const [imgSrc, setImgSrc] = useState(null);
