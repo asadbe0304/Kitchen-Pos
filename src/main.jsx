@@ -13,7 +13,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <AuthRegister>
       <OrderProvider>
-        <ToastContainer theme="light" />
+        <ToastContainer theme="light"
+        autoClose="1000" />
         <Load />
         <App />
       </OrderProvider>
