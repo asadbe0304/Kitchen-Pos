@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import Img from "./.././../assets/img/2.jpg";
+import Img from "./.././../assets/img/acc.png";
 
 const index = () => {
   let user = localStorage.getItem("user");

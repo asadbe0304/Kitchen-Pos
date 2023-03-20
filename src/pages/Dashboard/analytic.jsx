@@ -5,7 +5,7 @@ import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
 const analytic = () => {
   return (
     <>
-      <div className="flex flex-wrap mt-6 py-1 px-3 justify-between items-start gap-2">
+      <div className="flex flex-wrap balance-wrap mt-6 py-1 px-3 justify-between items-start gap-2">
         <div className="dashboard-invoice shadow-lg shadow-slate-500 bg-green-500">
           <div className="flex justify-start after-cirlce items-center gap-2">
             <div className="p-1 bg-slate-300 rounded-md v">

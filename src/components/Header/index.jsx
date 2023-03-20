@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import SearchImg from "./../../assets/svg/search.svg";
-import Avatar from "./../../assets/img/2.jpg";
+import Avatar from "./../../assets/img/acc.png";
 import { MdNotifications, MdWbSunny, MdNightlight } from "react-icons/md";
 import Cart from "./../../assets/svg/shopping-cart.svg";
 import { useOrder } from "../../context/context";

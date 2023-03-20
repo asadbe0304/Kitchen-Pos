@@ -141,11 +141,11 @@
   }
 }
 @media screen and (max-width: 370px) {
-  .dashboard-invoice {
-    width: 100%;
-  }
   .wrapper-balance {
     padding: 0 !important;
+  }
+  .balance-wrap{
+    padding: 0!important;
   }
   .balance{
     width: 100%;
