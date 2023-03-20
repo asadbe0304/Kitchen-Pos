@@ -6,11 +6,11 @@ import { useState } from "react";
 const index = () => {
   const [load, setLoad] = useState(true);
   useEffect(() => {
-    window.addEventListener("load", ()=>{
-      return setLoad(false)
-    }, [load]);
+    setTimeout(() => {
+      setLoad(false);
+    }, 1000);
+  }, [load]);
 
-  });
   console.log(load);
   return (
     <>
