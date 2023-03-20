@@ -1,31 +1,31 @@
-.kitchen{
+.kitchen {
   padding: 20px;
   width: 94%;
-  margin: 0px 0px 0px 90px;
+  margin: 0px 0px 100px 90px;
   background: var(--card);
 }
-@media screen and (max-width:800px) {
-  .real-order{
+@media screen and (max-width: 800px) {
+  .real-order {
     position: fixed;
     top: -100%;
     left: 0;
     z-index: 444444;
-    width: 100%!important;
+    width: 100% !important;
     height: 100vh;
     background: var(--card);
-    
   }
-
+  .kitchen-left {
+    width: 100% !important;
+  }
 }
-@media screen and (max-width:560px) {
-  .kitchen{
+@media screen and (max-width: 560px) {
+  .kitchen {
     width: 100%;
     margin: 0;
+    padding: 0 5px;
+    margin-bottom: 100px;
   }
-  .kitchen-order-list{
-    flex-direction: column!important;
-  }
-  .kitchen-left{
-    width: 100%!important;
+  .kitchen-order-list {
+    flex-direction: column !important;
   }
 }
