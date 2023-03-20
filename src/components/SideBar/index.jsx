@@ -15,7 +15,10 @@ const index = () => {
 
   let total = localStorage.getItem("totals");
 
-  const [navigate, setNavigate] = useState(false);
+  useEffect(() => {
+    const body = document.querySelector("body");
+    body.style.overflow = orderOpen ? "hidden" : "auto";
+  }, [orderOpen]);
 
   const navigator = useNavigate();
   const path = () => {

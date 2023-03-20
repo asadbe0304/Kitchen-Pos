@@ -8,8 +8,7 @@ const index = () => {
     state: { order, product },
     dispatch,
   } = useOrder();
-  // console.log(order);
-  // console.log(product);
+
   return (
     <div className="choose-order w-full my-3">
       <div className="choose-order-top flex items-center justify-between p-0 w-full">
