@@ -9,17 +9,11 @@ const index = () => {
       <div className="profile-page pt-20">
         <section className="relative block py-16 ">
           <div
-            className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2710&amp;q=80')",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
+            className="absolute top-0 w-full h-full bg-center"
           >
             <span
               id="blackOverlay"
-              className="w-full h-full absolute opacity-50 bg-black"
+              className="w-full h-full absolute opacity-50 "
             ></span>
           </div>
           <div
@@ -41,8 +35,8 @@ const index = () => {
               ></polygon>
             </svg>
           </div>
-          <div className="container mx-auto px-4">
-            <div className="relative profile-inner ml-28 flex flex-col min-w-0 break-words w-9/12 mb-6 shadow-xl rounded-lg">
+          <div className=" mx-auto px-4">
+            <div className="relative profile-inner ml-28 flex flex-col min-w-0 break-words w-12/12 mb-6 shadow-xl rounded-lg">
               <div className="px-6">
                 <div className="flex w-full flex-wrap justify-center items-center flex-col">
                   <div className="w-full profile-top ">
