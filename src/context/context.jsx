@@ -8,14 +8,6 @@ const storage = localStorage.getItem("order")
   ? JSON.parse(localStorage.getItem("order"))
   : [];
 
-// const product = [...Array(30)].map(() => ({
-//   id: faker.datatype.uuid(),
-//   name: faker.commerce.productName(),
-//   category: faker.commerce.department(),
-//   price: faker.commerce.price(1, 30),
-//   image: faker.image.food(),
-// }));
-
 const initialState = {
   product: data,
   orderOpen: false,

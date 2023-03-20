@@ -4,3 +4,26 @@
   margin: 0px 0px 0px 90px;
   background: var(--card);
 }
+@media screen and (max-width:800px) {
+  .real-order{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 444444;
+    width: 100%!important;
+    height: 100vh;
+    background: var(--card);
+  }
+}
+@media screen and (max-width:560px) {
+  .kitchen{
+    width: 100%;
+    margin: 0;
+  }
+  .kitchen-order-list{
+    flex-direction: column!important;
+  }
+  .kitchen-left{
+    width: 100%!important;
+  }
+}
