@@ -2,49 +2,60 @@ import React from "react";
 import Img from "./../../assets/svg/elip.png";
 import Activity from "./activity";
 import { BsThreeDots } from "react-icons/bs";
+import Pies from "./Pie";
 
 const Balance = () => {
   return (
     <>
       <div className="wrapper-balance  w-full flex items-start  justify-between py-3 gap-2 px-1 mt-8 mb-20">
-        <div className="balance shadow-lg shadow-slate-500">
-          <div className="bg-balance">
-            <div className="flex justify-between gap-4 flex-col items-start">
-              <div className="flex justify-between flex-col items-start">
-                <h4 className="text-white font-medium text-sm">Balance</h4>
-                <div className="flex items-center justify-between w-full">
-                  <strong className="text-white">$4,989</strong>
-                  <p className="text-white w-full flex items-center justify-between gap-2 ml-14">
-                    <BsThreeDots />
-                    <BsThreeDots />
-                    <BsThreeDots />
-                    4565
-                  </p>
+        <div className="flex flex-col items-start justify-between gap-4">
+          <div className="balance shadow-lg shadow-slate-500 ">
+            <div className="bg-balance">
+              <div className="flex justify-between gap-4 flex-col items-start">
+                <div className="flex justify-between flex-col items-start">
+                  <h4 className="text-white font-medium text-sm">Balance</h4>
+                  <div className="flex items-center justify-between w-full">
+                    <strong className="text-white">$4,989</strong>
+                    <p className="text-white w-full flex items-center justify-between gap-2 ml-14">
+                      <BsThreeDots />
+                      <BsThreeDots />
+                      <BsThreeDots />
+                      4565
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="w-full flex items-center gap-2 justify-between">
-                <div>
-                  <p className="text-white text-sm font-medium">Valid thru</p>
-                  <span className="text-white font-medium text-sm">02/23</span>
-                </div>
-                <div>
-                  <p className="text-white text-sm font-medium">Name</p>
-                  <span className="text-white font-medium text-sm">
-                    John Doe
-                  </span>
-                </div>
-                <div className="relative">
-                  <img src={Img} width={30} height={30} alt="ellipces" />
-                  <img
-                    className="absolute z-10 top-0 left-4"
-                    src={Img}
-                    width={30}
-                    height={30}
-                    alt="ellipces"
-                  />
+                <div className="w-full flex items-center gap-2 justify-between">
+                  <div>
+                    <p className="text-white text-sm font-medium">Valid thru</p>
+                    <span className="text-white font-medium text-sm">
+                      02/23
+                    </span>
+                  </div>
+                  <div>
+                    <p className="text-white text-sm font-medium">Name</p>
+                    <span className="text-white font-medium text-sm">
+                      John Doe
+                    </span>
+                  </div>
+                  <div className="relative">
+                    <img src={Img} width={30} height={30} alt="ellipces" />
+                    <img
+                      className="absolute z-10 top-0 left-4"
+                      src={Img}
+                      width={30}
+                      height={30}
+                      alt="ellipces"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="w-full rounded-lg pie-dashboard shadow-xl p-2 shadow-slate-500" style={{background:"var(--card)"}}>
+            <h3 className="nav-title font-medium my-2 ">
+              Pie diagram Sales
+            </h3>
+          <Pies />
           </div>
         </div>
         <div
