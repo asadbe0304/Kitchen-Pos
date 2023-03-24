@@ -43,6 +43,9 @@ height: 100%;
   top: -13px;
   right: -12px;
 }
+.inbox{
+  z-index: 9999999;
+}
 @media screen and (max-width: 1050px) {
   .cart-order {
     display: block;

@@ -4,7 +4,7 @@ const inbox = ({ setInbox, prop }) => {
   return (
     <>
       <div
-        className={`absolute inbox right-14 top-10 mt-1 bg-white rounded-md shadow-lg overflow-hidden z-20 ${
+        className={`absolute inbox right-14 top-10 mt-1 bg-white rounded-md shadow-lg overflow-hidden  ${
           prop ? "block" : "hidden"
         }`}
         style={{ width: "20rem" }}
