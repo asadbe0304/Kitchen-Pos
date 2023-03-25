@@ -10,7 +10,7 @@
   bottom: -80px;
   // top: 80px;/
   border-radius: 10px;
-  z-index: 444;
+  z-index: 1;
   background: var(--card);
 }
 .active {
@@ -48,7 +48,7 @@
     bottom: 0% !important;
     padding: 0px 0px !important;
     height: 80px !important;
-    z-index: 445;
+    z-index: 5;
     display: flex;
     // top: 93%;
     border-bottom-right-radius:0px!important;
