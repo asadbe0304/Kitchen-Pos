@@ -17,10 +17,14 @@ const index = () => {
   let local = localStorage.getItem("user");
   const [data, setDateState] = useState(new Date());
 
+  const close = () => {
+    const [data2, setDateState2] = useState(new Date());
+  };
+
   return (
     <>
       <div className="container">
-        <div className="attendance  shadow-2xl w-3/4 mx-24 mt-32 p-6 rounded-lg">
+        <div className="attendance mx-24 mt-32 p-6 rounded-lg">
           <div className="attendance-track flex items-center gap-1 nav-title">
             <BsClock />
             <h3 className="nav-title text-lg">Worker Attendance Track time</h3>
@@ -53,13 +57,22 @@ const index = () => {
                     className="border bg-slate-100 w-full text-black rounded-md my-4 p-2 focus:border-outline-400"
                   />
                 </label>
-                <button
-                  type="button"
-                  className="nav-title font-medium hover:bg-orange-400 focus:ring-orange-600 focus:ring-2 bg-orange-500 py-1 px-3 rounded-2xl"
-                  onClick={capture}
-                >
-                  Save Time
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    className="nav-title font-medium hover:bg-orange-400 focus:ring-orange-600 focus:ring-2 bg-orange-500 py-1 px-3 rounded-2xl"
+                    onClick={capture}
+                  >
+                    Save Time
+                  </button>
+                  <button
+                    type="button"
+                    className="nav-title font-medium hover:bg-red-400 focus:ring-red-600 focus:ring-2 bg-red-500 py-1 px-3 rounded-2xl"
+                    // onClick={close}
+                  >
+                    Close Time
+                  </button>
+                </div>
               </form>
               {imgSrc && (
                 <div className="video-tracker">
@@ -90,7 +103,7 @@ const index = () => {
                       </div>
                       <div className="flex items-center gap-2">
                         <BsClock />
-                        <span className="time-start finally">00:00</span>
+                        <span className="time-start finally">00:00 </span>
                       </div>
                     </div>
                   </div>

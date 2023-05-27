@@ -12,6 +12,7 @@ const initialState = {
   product: data,
   orderOpen: false,
   profile: false,
+  difference: false,
   order: storage,
   ...sumOrder,
 };

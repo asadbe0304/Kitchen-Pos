@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import Img from "./.././../assets/img/acc.png";
 
 const index = () => {
-  let user = localStorage.getItem("user");
+  const [user, setUser] = useState(localStorage.getItem("user"));
+  // const [file, setFile] = useState();
+  // const [img, setImg] = useState(
+  //   (img.src = URL.createObjectURL(setFile.files[0]))
+  // );
+
   return (
     <>
       <div className="profile-page pt-20">
         <section className="relative block py-16 ">
-          <div
-            className="absolute top-0 w-full h-full bg-center"
-          >
+          <div className="absolute top-0 w-full h-full bg-center">
             <span
               id="blackOverlay"
               className="w-full h-full absolute opacity-50 "
             ></span>
           </div>
-          <div
+          {/* <div
             className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
             style={{ transform: "translateZ(0px)" }}
           >
@@ -34,7 +37,7 @@ const index = () => {
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
-          </div>
+          </div> */}
           <div className=" mx-auto px-4">
             <div className="relative profile-inner ml-28 flex flex-col min-w-0 break-words w-12/12 mb-6 shadow-xl rounded-lg">
               <div className="px-6">
@@ -50,8 +53,13 @@ const index = () => {
                         className="shadow-xl  avatar rounded-full max-w-150-px"
                       />
                     </div>
+                    {/* <input
+                      type="file"
+                      value={file}
+                      className="change-avatar"
+                    /> */}
                   </div>
-                  <div className="w-full profile-bottom flex items-center flex-row-reverse justify-between ">
+                  <div className="profile-bottom gap-8 flex items-center flex-row-reverse justify-between ">
                     <div className="w-1/2 top-right flex items-end justify-end ">
                       <button
                         className="bg-amber-500 active:bg-amber-600 uppercase  nav-title font-bold  px-4 py-2 rounded outline-none focus:outline-none ease-linear transition-all text-sm duration-150"

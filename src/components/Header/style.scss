@@ -2,6 +2,8 @@
   width: 100%;
   z-index: 15;
   background: var(--card);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .profile {
   top: 60px;
@@ -47,6 +49,7 @@
   position: absolute;
   z-index: 25;
 }
+
 @media screen and (max-width: 1050px) {
   .cart-order {
     display: block;

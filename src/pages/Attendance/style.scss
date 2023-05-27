@@ -1,22 +1,23 @@
 .attendance {
   background: var(--card);
   margin-bottom: 100px;
+  width: 92%;
 }
 .video {
   margin-top: 30px;
 }
-.video-tracker{
+.video-tracker {
   width: 100%;
   height: 130px;
   overflow-y: scroll;
 }
-.track-time{
+.track-time {
   background: var(--order);
 }
-.camera-screen-img{
+.camera-screen-img {
   margin-top: 30px;
-  width: 80px!important;
-  height: 80px!important;
+  width: 80px !important;
+  height: 80px !important;
 }
 @media screen and (max-width: 921px) {
   .video-track {
@@ -29,9 +30,9 @@
     width: 100% !important;
   }
 }
-@media screen and (max-width:560px) {
-  .attendance{
-    margin-left: 0px!important;
-    width: 100%!important;
+@media screen and (max-width: 560px) {
+  .attendance {
+    margin-left: 0px !important;
+    width: 100% !important;
   }
 }

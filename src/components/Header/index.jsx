@@ -29,7 +29,7 @@ const index = () => {
   return (
     <div className="site-header">
       <div className="container">
-        <div className="header rounded-md p-2 flex align-middle justify-between fixed top-0 left-0 px-3">
+        <div className="header p-2 flex align-middle justify-between fixed top-0 left-0 px-3">
           <h1 className="fw-bold header-title flex flex-col nav-title items-start text-black-900 text-2xl font-medium">
             System
             <span
