@@ -3,7 +3,7 @@ import Card from "./ChooseCard";
 import { useOrder } from "../../context/context";
 import "./style.scss";
 
-const index = () => {
+const index = ({filter}) => {
   const {
     state: { order, product },
     dispatch,
@@ -19,7 +19,7 @@ const index = () => {
         {/* <div className="text-xl font-medium sort-title">Sort By Popular</div> */}
       </div>
       <div className="choose-order-body flex flex-wrap items-start justify-center gap-4  py-2 my-2 px-3 w-full">
-        {product.map((e) => {
+        {filter.map((e) => {
           return <Card key={e.id} prop={e}/>
         })}
       </div>
