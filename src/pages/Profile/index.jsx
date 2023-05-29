@@ -65,8 +65,8 @@ const index = () => {
                         alt="avatar profile"
                         width={120}
                         height={120}
-                        src={imageSrc == "" ? Img : imageSrc}
-                        className="shadow-xl rounded-full  avatar max-w-150-px"
+                        src={imageSrc == "" ? imageSrc : imageSrc}
+                        className="shadow-xl rounded-full overflow-hidden  avatar max-w-150-px"
                       />
                     </div>
                     <input

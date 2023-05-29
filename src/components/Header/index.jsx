@@ -8,6 +8,7 @@ import { useOrder } from "../../context/context";
 import "./style.scss";
 import Notif from "./notif";
 import Inbox from "./inbox";
+import { data } from "../../db/db";
 const index = () => {
   const [inbox, setInbox] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -26,6 +27,23 @@ const index = () => {
     state: { profile, order },
     dispatch,
   } = useOrder();
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    // Perform search logic
+    const results = data.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    setSearchResults(results);
+  };
+  console.log(searchResults);
+
   return (
     <div className="site-header">
       <div className="container">
@@ -49,10 +67,10 @@ const index = () => {
                 height={14}
               />
               <input
-                type="search"
-                name="search"
-                id="search"
-                placeholder="Search ex:coffe tea.."
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={handleSearch}
                 className="border search-input p-2 rounded-xl outline-0 border-b-green-50"
               />
             </label>
@@ -93,6 +111,20 @@ const index = () => {
           </div>
         </div>
       </div>
+      <ul className={`${searchQuery === "" ? "hidden" : "block"} absolute top-14 left-0 right-0 mx-auto z-30 bg-slate-500 `}>
+        {searchResults.map((product) => (
+          <li className="flex items-center gap-5 justify-center" key={product.id}>
+            <img
+              src={product.images}
+              alt={product.name}
+              className="rounded-full"
+              style={{ width: "40px", height: "40px" }}
+            />
+            <h4>{product.name}</h4>
+            <span>{product.price} $</span>
+          </li>
+        ))}
+      </ul>
       {/* <Profile /> */}
     </div>
   );
