@@ -1,19 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { MdEdit } from "react-icons/md";
 import "./style.scss";
 import Img from "./.././../assets/img/acc.png";
 
 const index = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
- 
+
+  const [imageSrc, setImageSrc] = useState("");
+
+  useEffect(() => {
+    // Retrieve the image source from local storage on component mount
+    const storedImageSrc = localStorage.getItem("imageSrc");
+    if (storedImageSrc) {
+      setImageSrc(storedImageSrc);
+    }
+  }, []);
+
   const handleInputChange = (event) => {
     const file = event.target.files[0];
     const imageUrl = URL.createObjectURL(file);
 
-    // Update the image source
+    // Update the image source and store it in local storage
     setImageSrc(imageUrl);
+    localStorage.setItem("imageSrc", imageUrl);
   };
-  const [imageSrc, setImageSrc] = useState();
-  
+
   return (
     <>
       <div className="profile-page pt-20">
@@ -55,14 +66,19 @@ const index = () => {
                         width={120}
                         height={120}
                         src={imageSrc == "" ? Img : imageSrc}
-                        className="shadow-xl  avatar rounded-full max-w-150-px"
+                        className="shadow-xl rounded-full  avatar max-w-150-px"
                       />
                     </div>
                     <input
                       type="file"
                       onChange={handleInputChange}
-                      className="change-avatar"
+                      className="change-avatar cursor-pointer opacity-0"
                     />
+                    <div className="rounded-xl flex cursor-pointer items-center justify-center z-10 absolute top-1 right-20 bg-slate-700" style={{width:"30px", height:"30px"}}>
+                      <MdEdit
+                        style={{ width: "25px", height: "25px" }}
+                      />
+                    </div>
                   </div>
                   <div className="profile-bottom gap-8 flex items-center flex-row-reverse justify-between ">
                     <div className="w-1/2 top-right flex items-end justify-end ">
