@@ -4,11 +4,16 @@ import Img from "./.././../assets/img/acc.png";
 
 const index = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
-  // const [file, setFile] = useState();
-  // const [img, setImg] = useState(
-  //   (img.src = URL.createObjectURL(setFile.files[0]))
-  // );
+ 
+  const handleInputChange = (event) => {
+    const file = event.target.files[0];
+    const imageUrl = URL.createObjectURL(file);
 
+    // Update the image source
+    setImageSrc(imageUrl);
+  };
+  const [imageSrc, setImageSrc] = useState();
+  
   return (
     <>
       <div className="profile-page pt-20">
@@ -49,15 +54,15 @@ const index = () => {
                         alt="avatar profile"
                         width={120}
                         height={120}
-                        src={Img}
+                        src={imageSrc == "" ? Img : imageSrc}
                         className="shadow-xl  avatar rounded-full max-w-150-px"
                       />
                     </div>
-                    {/* <input
+                    <input
                       type="file"
-                      value={file}
+                      onChange={handleInputChange}
                       className="change-avatar"
-                    /> */}
+                    />
                   </div>
                   <div className="profile-bottom gap-8 flex items-center flex-row-reverse justify-between ">
                     <div className="w-1/2 top-right flex items-end justify-end ">
