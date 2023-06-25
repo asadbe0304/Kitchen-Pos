@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useOrder } from "../../context/context";
 
-const notif = ({ theme, toggleTheme }) => {
-  let local = localStorage.getItem("user");
+const Notif = ({ theme, toggleTheme }) => {
+  let local = localStorage.getItem("user")||"";
   const {
     state: { profile },
     dispatch,
@@ -71,4 +71,4 @@ const notif = ({ theme, toggleTheme }) => {
   );
 };
 
-export default notif;
+export default Notif;
