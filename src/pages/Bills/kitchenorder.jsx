@@ -4,7 +4,7 @@ import { useOrder } from "../../context/context";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { FaRegClock } from "react-icons/fa";
 
-const kitchenorder = () => {
+const Kitchenorder = () => {
   const {
     state: { order },
     dispatch,
@@ -94,4 +94,4 @@ const kitchenorder = () => {
   );
 };
 
-export default kitchenorder;
+export default Kitchenorder;
