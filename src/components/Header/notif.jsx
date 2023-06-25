@@ -8,6 +8,18 @@ const notif = ({ theme, toggleTheme }) => {
     state: { profile },
     dispatch,
   } = useOrder();
+  const handleFullscreen = () => {
+    const element = document.documentElement; // Get the root element of the document
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
+  };
   return (
     <>
       <div
@@ -21,7 +33,7 @@ const notif = ({ theme, toggleTheme }) => {
             <NavLink
               to="/profile"
               onClick={() => dispatch({ type: "PROFILE", payload: false })}
-              className="nav-title font-medium text-md"
+              className="nav-title hover:bg-black font-medium text-md"
             >
               Profile
             </NavLink>
@@ -37,14 +49,20 @@ const notif = ({ theme, toggleTheme }) => {
           </li>
 
           <li
-            className="nav-title profile-title font-medium text-md"
+            className="nav-title profile-title hover:bg-black font-medium text-md"
             onClick={() => toggleTheme()}
           >
             {theme === "dark" ? "Light theme" : "Dark theme"}
             {/* Theme */}
           </li>
-          <li className="nav-title profile-title font-medium text-md">
+          <li className="nav-title hover:bg-black cursor-pointer profile-title font-medium text-md">
             Language
+          </li>
+          <li
+            onClick={handleFullscreen}
+            className="nav-title hover:bg-black cursor-pointer profile-title font-medium text-md"
+          >
+            Fullscreen
           </li>
         </ul>
         <div className="triang "></div>

@@ -21,7 +21,7 @@ const index = () => {
         <Route path="/settings" element={<Settings />} />
         <Route path="/bills" element={<Bills />} />
         <Route path="/logout" element={<Logout />} />
-        {/* <Route path="/sign" element={<Sign />} /> */}
+        <Route path="/sign" element={<Sign />} />
         <Route path="/track" element={<Track />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />

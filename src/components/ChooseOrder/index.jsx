@@ -1,14 +1,9 @@
 import React from "react";
 import Card from "./ChooseCard";
-import { useOrder } from "../../context/context";
+// import { useOrder } from "../../context/context";
 import "./style.scss";
 
 const index = ({filter}) => {
-  const {
-    state: { order, product },
-    dispatch,
-  } = useOrder();
-
   return (
     <div className="choose-order w-full my-3">
       <div className="choose-order-top flex items-center justify-between p-0 w-full">

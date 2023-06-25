@@ -9,6 +9,7 @@ const storage = localStorage.getItem("order")
 
 const initialState = {
   product: data,
+  // tranferData: {},
   orderOpen: false,
   profile: false,
   difference: false,

@@ -29,9 +29,6 @@ const index = () => {
             </h3>
             <div className="w-full px-3 box snap-x snap-mandatory">
               <div className="category-order-top snap-x snap-mandatory flex items-center justify-around gap-3 py-3">
-                {/* {product.slice(6, 12).map((e) => {
-                  return <Card prop={e} key={e.id} />;
-                })} */}
                 <div
                   onClick={() => setSelectedCategory("All")}
                   className="snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400 font-medium  hover:text-black"
@@ -108,3 +105,7 @@ const index = () => {
 };
 
 export default index;
+
+/* {product.slice(6, 12).map((e) => {
+                  return <Card prop={e} key={e.id} />;
+                })} */

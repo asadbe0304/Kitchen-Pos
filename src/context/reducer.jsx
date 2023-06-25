@@ -54,6 +54,11 @@ export const reducers = (state, action) => {
         ...state,
         order: [],
       };
+    // case "TRANSFER":
+    //   return {
+    //     ...state,
+    //     tranferData: [state.order],
+    //   };
     case "DECREASE":
       state.order[state.order.findIndex((e) => e.id === action.payload.id)]
         .quantity--;

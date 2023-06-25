@@ -27,6 +27,7 @@ const CartFooter = () => {
     }, 1000);
     setTimeout(() => {
       dispatch({ type: "ORDER__CART" });
+      dispatch({ type: "TRANSFER" });
       dispatch({ type: "CLEAR" });
       localStorage.removeItem("totals");
       localStorage.removeItem("order");

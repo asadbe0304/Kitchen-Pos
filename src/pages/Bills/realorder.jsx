@@ -17,7 +17,7 @@ const realorder = () => {
         {order.length > 0
           ? order.map((e) => {
               return (
-                <li className="flex items-center justify-between w-full border rounded-md p-2">
+                <li key={e.id} className="flex items-center justify-between w-full border rounded-md p-2">
                   <h3 className="font-medium nav-title">{e.name}</h3>
                   <span className="font-medium nav-title">x{e.quantity}</span>
                 </li>

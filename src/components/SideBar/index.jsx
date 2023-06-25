@@ -9,7 +9,7 @@ import "./style.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 const index = () => {
   const {
-    state: { order, orderOpen },
+    state: { order, orderOpen},
     dispatch,
   } = useOrder();
 
