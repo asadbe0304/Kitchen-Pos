@@ -1,9 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useOrder } from "../../context/context";
-
+import { BsFullscreen, BsCalendarRange } from "react-icons/bs";
+import { CgProfile } from "react-icons/cg";
+import { CiDark } from "react-icons/ci";
+import { BiLogOut } from "react-icons/bi";
 const Notif = ({ theme, toggleTheme }) => {
-  let local = localStorage.getItem("user")||"";
+  let local = localStorage.getItem("user") || "";
   const {
     state: { profile },
     dispatch,
@@ -33,8 +36,9 @@ const Notif = ({ theme, toggleTheme }) => {
             <NavLink
               to="/profile"
               onClick={() => dispatch({ type: "PROFILE", payload: false })}
-              className="nav-title hover:bg-black font-medium text-md"
+              className="nav-title flex gap-2 items-center hover:bg-black font-medium text-md"
             >
+              <CgProfile />
               Profile
             </NavLink>
           </li>
@@ -42,26 +46,30 @@ const Notif = ({ theme, toggleTheme }) => {
             <NavLink
               to="/"
               onClick={() => dispatch({ type: "PROFILE", payload: false })}
-              className="nav-title font-medium text-md"
+              className="nav-title flex items-center gap-2 font-medium text-md"
             >
+              <BiLogOut />
               Log Out
             </NavLink>
           </li>
 
           <li
-            className="nav-title profile-title hover:bg-black font-medium text-md"
+            className="nav-title profile-title flex items-center gap-2 hover:bg-black font-medium text-md"
             onClick={() => toggleTheme()}
           >
+            <CiDark />
             {theme === "dark" ? "Light theme" : "Dark theme"}
             {/* Theme */}
           </li>
-          <li className="nav-title hover:bg-black cursor-pointer profile-title font-medium text-md">
+          <li className="nav-title hover:bg-black gap-2 flex items-center cursor-pointer profile-title font-medium text-md">
+            <BsCalendarRange />
             Language
           </li>
           <li
             onClick={handleFullscreen}
-            className="nav-title hover:bg-black cursor-pointer profile-title font-medium text-md"
+            className="nav-title flex items-center gap-2 hover:bg-black cursor-pointer profile-title font-medium text-md"
           >
+            <BsFullscreen />
             Fullscreen
           </li>
         </ul>

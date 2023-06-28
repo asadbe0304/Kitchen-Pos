@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import { useOrder } from "../../context/context";
 import { data } from "./../../db/db";
@@ -7,9 +7,6 @@ import Logo from "./Logo";
 import Right from "./Right";
 import SearchImg from "./../../assets/svg/search.svg";
 const index = () => {
-
-
-  
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
@@ -33,7 +30,8 @@ const index = () => {
     state: { order },
     dispatch,
   } = useOrder();
-  console.log(order);
+
+
   return (
     <div className="site-header">
       <div className="container">
