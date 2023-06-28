@@ -5,8 +5,8 @@ import Img from "./../../assets/img/logo.png";
 import { toast } from "react-toastify";
 
 const log = () => {
-  const [user, setUser] = useState("Asadbek");
-  const [pass, setPass] = useState(12345678);
+  const [user, setUser] = useState("");
+  const [pass, setPass] = useState();
   const [admin, setAdmin] = useState("Asadbek");
   const [adminPass, setAdminPass] = useState(12345678);
   let userLocal = localStorage.setItem("user", user);
