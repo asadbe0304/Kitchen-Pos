@@ -3,12 +3,8 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { useOrder } from "../../context/context";
 
 const CheckRight = () => {
-  const {
-    state: { difference },
-    dispatch,
-  } = useOrder();
   const [total, setTotal] = useState(localStorage.getItem("totals"));
-  // const [difference, setDifference] = useState(0);
+  const [differen, setDifference] = useState(0);
   return (
     <>
       <div className="checkout px-1 mt-2 mx-auto flex-col w-1/2  flex items-center justify-center">
@@ -39,8 +35,9 @@ const CheckRight = () => {
               <input
                 type="number"
                 id="check"
+                value={differen}
                 style={{ background: "var(--order)" }}
-                onChange={() => dispatch({ type: "DIFF", payload: true })}
+                onChange={(e) => setDifference(e.target.value)}
                 placeholder="100$"
                 className="check-input rounded-md border-b-2 outline-none border-b-black py-2 my-2 px-2"
               />
@@ -48,7 +45,7 @@ const CheckRight = () => {
             <div className="check-difference ml-2 nav-title flex flex-col items-start">
               Difference
               <span className="text-red-400 font-medium ">
-                {(total - difference).toFixed(1)}$
+                {total - differen}$
               </span>
             </div>
           </div>

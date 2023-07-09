@@ -77,12 +77,7 @@ export const reducers = (state, action) => {
         ...state,
         profile: action.payload,
       };
-    case "DIFF":
-      return {
-        ...state,
-        difference: action.payload,
-        // if(difference) {},
-      };
+  
     default:
       return state;
   }
