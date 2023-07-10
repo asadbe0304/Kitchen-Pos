@@ -10,7 +10,7 @@ const item = ({ e }) => {
   const clear = () => {
     setTimeout(() => {
       dispatch({ type: "REMOVE__ORDER", payload: e });
-    }, 1400);
+    }, 1000);
   };
   return (
     <>
@@ -18,8 +18,8 @@ const item = ({ e }) => {
         <motion.div
           drag="x"
           dragControls={controls}
-          onDrag={clear}
-          className="flex items-center order-item p-2 justify-between rounded-xl order-item hover:scale-95 border w-full"
+          onDragEnd={clear}
+          className="flex cursor-pointer items-center order-item p-2 justify-between rounded-xl order-item hover:scale-95 border w-full"
         >
           <img
             src={e.images}
