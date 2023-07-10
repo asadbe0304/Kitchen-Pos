@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --body: #52a96fb7;
-  --card: #0a8853;
-  --title: #f0f0f0;
+  --body: #edf5d1;
+  --card: #d1114d;
+  --title: #000000;
   --text: #041912;
-  --order: #737b78;
+  --order: #a3999b;
 }
 .dark {
   --body: #111;

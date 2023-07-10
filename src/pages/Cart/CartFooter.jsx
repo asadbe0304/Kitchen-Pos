@@ -44,7 +44,7 @@ const CartFooter = () => {
           Cancel
         </button>
         <button
-          disabled={difference === 0}
+          
           className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-4 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150"
           type="button"
           onClick={notify}

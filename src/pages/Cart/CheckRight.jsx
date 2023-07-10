@@ -4,7 +4,17 @@ import { useOrder } from "../../context/context";
 
 const CheckRight = () => {
   const [total, setTotal] = useState(localStorage.getItem("totals"));
-  const [differen, setDifference] = useState(0);
+  const [differen, setDifference] = useState();
+ 
+ 
+  const handleChange = (event) => {
+    const inputValue = event.target.value;
+    // Check if the input value is a positive number
+    if (/^\d+$/.test(inputValue)) {
+      setDifference(inputValue);
+    }
+  };
+
   return (
     <>
       <div className="checkout px-1 mt-2 mx-auto flex-col w-1/2  flex items-center justify-center">
@@ -37,7 +47,7 @@ const CheckRight = () => {
                 id="check"
                 value={differen}
                 style={{ background: "var(--order)" }}
-                onChange={(e) => setDifference(e.target.value)}
+                onChange={handleChange}
                 placeholder="100$"
                 className="check-input rounded-md border-b-2 outline-none border-b-black py-2 my-2 px-2"
               />
@@ -45,7 +55,7 @@ const CheckRight = () => {
             <div className="check-difference ml-2 nav-title flex flex-col items-start">
               Difference
               <span className="text-red-400 font-medium ">
-                {total - differen}$
+                {(total - differen).toFixed(1)}$
               </span>
             </div>
           </div>
