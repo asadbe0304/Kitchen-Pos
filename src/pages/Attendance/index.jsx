@@ -21,7 +21,6 @@ const index = () => {
     const [data2, setDateState2] = useState(new Date());
   };
 
-
   return (
     <>
       <div className="container">
@@ -113,7 +112,6 @@ const index = () => {
             </div>
           </div>
         </div>
-      
       </div>
     </>
   );

@@ -11,6 +11,7 @@ import Track from "./../pages/Attendance";
 import Profile from "./../pages/Profile";
 import Cart from "./../pages/Cart";
 import Layout from "../layout/Layout";
+// import TimeTracker from "../pages/Scaner/TimeTRack";
 const index = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const index = () => {
         <Route path="/track" element={<Track />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />
+        {/* <Route path="/time" element={<TimeTracker />} /> */}
       </Routes>
     </>
   );
