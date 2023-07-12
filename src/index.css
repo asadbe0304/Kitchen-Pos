@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --body: #e5f3ec;
-  --card: #85d1cbf3;
+  --body: #cccccc;
+  --card: #ffffff;
   --title: #000000;
   --text: #041912;
   --order: #a3999b;

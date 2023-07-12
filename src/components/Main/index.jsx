@@ -31,7 +31,9 @@ const index = () => {
               <div className="category-order-top snap-x snap-mandatory flex items-center justify-around gap-3 py-3">
                 <div
                   onClick={() => setSelectedCategory("All")}
-                  className="snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400 font-medium  hover:text-black"
+                  className={`${
+                    selectedCategory === "All" ? "bg-amber-400" : "s"
+                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[4].images}
@@ -44,7 +46,9 @@ const index = () => {
                 </div>
                 <div
                   onClick={() => setSelectedCategory("Burger")}
-                  className="snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400 font-medium  hover:text-black"
+                  className={`${
+                    selectedCategory === "Burger" ? "bg-amber-400" : "s"
+                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[2].images}
@@ -57,7 +61,9 @@ const index = () => {
                 </div>
                 <div
                   onClick={() => setSelectedCategory("Drink")}
-                  className="snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400 font-medium  hover:text-black"
+                  className={`${
+                    selectedCategory === "Drink" ? "bg-amber-400" : "s"
+                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[10].images}
@@ -70,7 +76,9 @@ const index = () => {
                 </div>
                 <div
                   onClick={() => setSelectedCategory("Snack")}
-                  className="snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400 font-medium  hover:text-black"
+                  className={`${
+                    selectedCategory === "Snack" ? "bg-amber-400" : "s"
+                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[19].images}
@@ -83,7 +91,9 @@ const index = () => {
                 </div>
                 <div
                   onClick={() => setSelectedCategory("Free")}
-                  className="snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400 font-medium  hover:text-black"
+                  className={`${
+                    selectedCategory === "Free" ? "bg-amber-400" : "s"
+                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[9].images}

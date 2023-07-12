@@ -18,7 +18,7 @@ const item = ({ e }) => {
         <motion.div
           drag="x"
           dragControls={controls}
-          onDragEnd={clear}
+          onDrag={clear}
           className="flex cursor-pointer items-center order-item p-2 justify-between rounded-xl order-item hover:scale-95 border w-full"
         >
           <img
