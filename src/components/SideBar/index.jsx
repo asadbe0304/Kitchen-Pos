@@ -72,7 +72,7 @@ const index = () => {
         <div className="w-full">
           <button
             onClick={path}
-            className="bg-orange-400 font-medium text-white hover:bg-orange-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-lg"
+            className="bg-red-600 font-medium text-white hover:bg-red-500 hover:shadow-inner hover:shadow-black transition-all duration-300 cursor-pointer flex items-center justify-center p-3 w-full rounded-lg"
           >
             Charge $ {total == null ? "0" : total}
           </button>

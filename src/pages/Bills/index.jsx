@@ -8,7 +8,7 @@ const index = () => {
     <>
       <div className="pt-20">
         <div className="container">
-          <div className="kitchen rounded-md shadow-lg  shadow-slate-400 ">
+          <div className="kitchen rounded-md shadow-lg shadow-slate-400 ">
             <Top />
             <OrderTop />
             <Kitchen />

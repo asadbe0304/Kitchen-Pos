@@ -28,12 +28,12 @@ const index = () => {
               Menu <span className="text-slate-600">Category</span>
             </h3>
             <div className="w-full px-3 box snap-x snap-mandatory">
-              <div className="category-order-top snap-x snap-mandatory flex items-center justify-around gap-3 py-3">
+              <div className="category-order-top  rounded-xl snap-x snap-mandatory flex items-center justify-around gap-3 py-3">
                 <div
                   onClick={() => setSelectedCategory("All")}
                   className={`${
-                    selectedCategory === "All" ? "bg-amber-400" : "s"
-                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
+                    selectedCategory === "All" ? "bg-red-600" : "s"
+                  } snap-always card-category  flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-red-600 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[4].images}
@@ -47,8 +47,8 @@ const index = () => {
                 <div
                   onClick={() => setSelectedCategory("Burger")}
                   className={`${
-                    selectedCategory === "Burger" ? "bg-amber-400" : "s"
-                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
+                    selectedCategory === "Burger" ? "bg-red-600" : "s"
+                  } snap-always card-category  flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-red-600 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[2].images}
@@ -62,8 +62,8 @@ const index = () => {
                 <div
                   onClick={() => setSelectedCategory("Drink")}
                   className={`${
-                    selectedCategory === "Drink" ? "bg-amber-400" : "s"
-                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
+                    selectedCategory === "Drink" ? "bg-red-600" : "s"
+                  } snap-always card-category flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-red-600 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[10].images}
@@ -77,8 +77,8 @@ const index = () => {
                 <div
                   onClick={() => setSelectedCategory("Snack")}
                   className={`${
-                    selectedCategory === "Snack" ? "bg-amber-400" : "s"
-                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
+                    selectedCategory === "Snack" ? "bg-red-600" : "s"
+                  } snap-always card-category  flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-red-600 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[19].images}
@@ -92,8 +92,8 @@ const index = () => {
                 <div
                   onClick={() => setSelectedCategory("Free")}
                   className={`${
-                    selectedCategory === "Free" ? "bg-amber-400" : "s"
-                  } snap-always card-category shadow-2xl shadow-orange-400 border flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-amber-300 text-sm text-slate-400  font-medium  hover:text-black`}
+                    selectedCategory === "Free" ? "bg-red-600" : "s"
+                  } snap-always card-category flex flex-col items-center rounded-xl justify-center gap-3 hover:bg-red-600 text-sm text-slate-400  font-medium  hover:text-black`}
                 >
                   <img
                     src={data[9].images}

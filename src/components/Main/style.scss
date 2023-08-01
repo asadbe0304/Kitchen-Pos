@@ -4,7 +4,7 @@
 }
 .category-order-top {
   width: 800px;
-  // overflow-x: scroll;
+  overflow-x: scroll;
 }
 .category-title{
   color: var(--title);
@@ -12,7 +12,9 @@
     color: var(--text);
   }
 }
-
+.card-category{
+  width: 600px!important;
+}
 @media screen and (max-width: 1050px) {
   .category-order {
     width: 90%;

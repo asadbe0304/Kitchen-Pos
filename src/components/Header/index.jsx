@@ -51,7 +51,7 @@ const index = () => {
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={handleSearch}
-                className="border search-input text-white p-2 rounded-xl outline-0 border-b-green-50"
+                className="search-input text-white p-2 rounded-xl outline-0 "
               />
             </label>
           </div>

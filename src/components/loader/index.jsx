@@ -8,7 +8,7 @@ const index = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoad(false);
-    }, 1000);
+    }, 2000);
   }, [load]);
 
   console.log(load);
