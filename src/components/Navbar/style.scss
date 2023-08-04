@@ -1,13 +1,15 @@
 .nav-item {
-  width: 80px;
-  height: 80px;
   font-size: 13px;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+  background-color: var(--body);
+}
+.nav-item:hover{
+  box-shadow: 1px 3px 10px 2px #ff481a4d;
 }
 .navbar {
-  position: fixed;
-  bottom: -80px;
+  // position: fixed;
+  // bottom: -80px;
   // top: 80px;/
   border-radius: 10px;
   z-index: 1;
@@ -19,13 +21,17 @@
   align-items: center;
   justify-content: center;
   color: #c21616;
+  width: 200px;
+  height: 150px;
 }
 .nav-list {
+  padding: 40px 10px; 
   padding-top: 10px;
-  overflow-y: scroll;
-  height: 400px;
+  // height: 400px;
 }
 .item {
+  width: 200px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +47,9 @@
     width: 26px;
     height: 26px;
   }
+}
+.nav-list{
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 560px) {
   .navbar {

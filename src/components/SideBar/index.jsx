@@ -39,7 +39,7 @@ const index = () => {
         onClick={() => dispatch({ type: "ORDER__CART", payload: false })}
       ></div>
       <div
-        className={`w-96 sidebar shadow-md fixed right-0 flex flex-col px-5 pb-4 items-center rounded-lg justify-start  pt-7 h-full ${
+        className={`sidebar shadow-md right-0 flex flex-col px-5 pb-4 items-center rounded-lg justify-start  pt-7 h-full ${
           orderOpen ? "hide" : "show"
         }`}
       >

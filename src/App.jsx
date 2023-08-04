@@ -1,5 +1,5 @@
 import Router from "./Routes";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import { useEffect } from "react";
 
@@ -29,7 +29,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Navbar />
+      {/* <Navbar /> */}
       <Router />
     </>
   );

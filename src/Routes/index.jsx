@@ -11,13 +11,23 @@ import Track from "./../pages/Attendance";
 import Profile from "./../pages/Profile";
 import Cart from "./../pages/Cart";
 import Layout from "../layout/Layout";
+import Cpanel from "./../pages/Disturbition"
+import Call from "./../pages/CallCenter"
+import Stock from "./../pages/Stock"
+import Cash from "./../pages/Cash"
+import Home from "./../pages/Home/index"
 // import TimeTracker from "../pages/Scaner/TimeTRack";
 const index = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Sign />} />
-        <Route path="/home" element={<Main />} />
+        <Route path="/main" element={<Main />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/disturbition" element={<Cpanel />} />
+        <Route path="/call" element={<Call />} />
+        <Route path="/stock" element={<Stock />} />
+        <Route path="/cash" element={<Main />} />
         <Route path="/dash" element={<DashBoard />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/bills" element={<Bills />} />

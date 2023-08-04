@@ -1,6 +1,14 @@
 .category-order {
-  width: 65%;
-  margin: 0 360px 0 80px;
+  width: 70%;
+  margin: 0 360px 0 0px;
+}
+.wrap-order{
+  padding: 90px 0 0 0;
+  display: flex;
+  // height: 400px;
+  // overflow-y: scroll;
+  justify-content: center;
+  align-items:start;
 }
 .category-order-top {
   width: 800px;
@@ -16,9 +24,9 @@
   width: 600px!important;
 }
 @media screen and (max-width: 1050px) {
-  .category-order {
-    width: 90%;
-  }
+  // .category-order {
+  //   width: 90%;
+  // }
   .box {
     overflow-x: scroll;
   }
