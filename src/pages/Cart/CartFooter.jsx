@@ -39,7 +39,7 @@ const CartFooter = () => {
         <button
           className="nav-title bg-orange-400 font-bold uppercase px-4 rounded-md py-3 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
           type="button"
-          onClick={() => navigate("/home")}
+          onClick={() => navigate("/main")}
         >
           Cancel
         </button>
