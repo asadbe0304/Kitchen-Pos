@@ -55,7 +55,7 @@ const index = () => {
             </svg>
           </div> */}
           <div className=" mx-auto px-4">
-            <div className="relative profile-inner ml-28 flex flex-col min-w-0 break-words w-12/12 mb-6 shadow-xl rounded-lg">
+            <div className="relative profile-inner  flex flex-col min-w-0 break-words w-12/12 mb-6 shadow-xl rounded-lg">
               <div className="px-6">
                 <div className="flex w-full flex-wrap justify-center items-center flex-col">
                   <div className="w-full profile-top ">
@@ -65,7 +65,7 @@ const index = () => {
                         alt="avatar profile"
                         width={120}
                         height={120}
-                        src={imageSrc == "" ? imageSrc : imageSrc}
+                        src={imageSrc == Img ? imageSrc : imageSrc}
                         className="shadow-xl rounded-full overflow-hidden  avatar max-w-150-px"
                       />
                     </div>

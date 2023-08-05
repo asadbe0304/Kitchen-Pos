@@ -1,6 +1,6 @@
 .dashboard-invoices {
-  width: 95%;
-  margin: 0 80px 0px 80px;
+  width: 100%;
+  // margin: 0 80px 0px 80px;
 }
 .dashboard-invoice {
   padding: 20px;
@@ -70,9 +70,9 @@
   }
 }
 @media screen and (max-width: 1050px) {
-  .dashboard-invoices {
-    width: 92%;
-  }
+  // .dashboard-invoices {
+  //   width: 92%;
+  // }
   .static-bar {
     overflow-x: scroll;
   }

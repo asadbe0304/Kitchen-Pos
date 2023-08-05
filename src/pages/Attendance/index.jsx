@@ -24,14 +24,14 @@ const index = () => {
   return (
     <>
       <div className="container">
-        <div className="attendance mx-24 mt-32 p-6 rounded-lg">
+        <div className="attendance flex flex-col mt-32 p-6 rounded-lg">
           <div className="attendance-track flex items-center gap-1 nav-title">
             <BsClock />
             <h3 className="nav-title text-lg">Worker Attendance Track time</h3>
           </div>
-          <div className="video-track flex items-start gap-6  justify-between w-full">
+          <div className="video-track flex flex-col-reverse items-center gap-6  justify-between w-full">
             {/* <video className="video w-1/2 rounded-md bg-slate-600"></video> */}
-            <div className="video rounded-md w-1/2">
+            <div className="video rounded-md">
               <Webcam
                 className="rounded-lg w-full"
                 screenshotFormat="image/jpeg"
@@ -40,7 +40,7 @@ const index = () => {
                 audio={false}
               />
             </div>
-            <div className="w-1/2 track-form">
+            <div className="w-full track-form">
               <form className=" flex flex-col items-start mt-6 justify-between w-full">
                 <label
                   htmlFor="userName"

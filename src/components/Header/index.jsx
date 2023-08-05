@@ -10,17 +10,17 @@ const index = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
-  const handleSearch = (e) => {
-    const query = e.target.value;
-    setSearchQuery(query);
+  // const handleSearch = (e) => {
+  //   const query = e.target.value;
+  //   setSearchQuery(query);
 
-    // Perform search logic
-    const results = data.filter((product) =>
-      product.name.toLowerCase().includes(query.toLowerCase())
-    );
+  //   // Perform search logic
+  //   const results = data.filter((product) =>
+  //     product.name.toLowerCase().includes(query.toLowerCase())
+  //   );
 
-    setSearchResults(results);
-  };
+  //   setSearchResults(results);
+  // };
 
   useEffect(() => {
     const body = document.querySelector("body");
@@ -37,7 +37,7 @@ const index = () => {
       <div className="container">
         <div className="header p-2 flex align-middle justify-between fixed top-0 left-0 px-3">
           <Logo />
-          <div className="input flex items-center justify-center">
+          {/* <div className="input flex items-center justify-center">
             <label htmlFor="search" className="relative">
               <img
                 src={SearchImg}
@@ -54,7 +54,7 @@ const index = () => {
                 className="search-input text-white p-2 rounded-xl outline-0 "
               />
             </label>
-          </div>
+          </div> */}
           <ul
             className={`${
               searchQuery === "" ? "hidden" : "block"

@@ -2,10 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 import { RiDashboard3Fill, RiLogoutCircleRFill } from "react-icons/ri";
-import {FaCpanel, FaWarehouse,FaCashRegister} from "react-icons/fa"
-import {FiPhoneCall} from "react-icons/fi"
+import { FaCpanel, FaWarehouse, FaCashRegister } from "react-icons/fa";
+import { FiPhoneCall } from "react-icons/fi";
 import { MdHistoryEdu, MdTrackChanges } from "react-icons/md";
-import {TbToolsKitchen} from "react-icons/tb"
+import { TbToolsKitchen } from "react-icons/tb";
 
 const list = () => {
   return (
@@ -63,15 +63,6 @@ const list = () => {
           >
             <FaWarehouse width={30} height={30} />
             Stock
-          </NavLink>
-        </li>
-        <li className="flex flex-col items-center gap-1  rounded-2xl nav-item  justify-center">
-          <NavLink
-            to="/dash"
-            className={({ isActive }) => (isActive ? "active" : "item")}
-          >
-            <RiDashboard3Fill width={30} height={30} />
-            Dashboard
           </NavLink>
         </li>
         <li className="flex flex-col items-center gap-1  rounded-2xl nav-item justify-center">
