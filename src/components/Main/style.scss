@@ -2,38 +2,38 @@
   width: 70%;
   margin: 0 360px 0 0px;
 }
-.wrap-order{
+.wrap-order {
   padding: 90px 0 0 0;
   display: flex;
   // height: 400px;
   // overflow-y: scroll;
   justify-content: center;
-  align-items:start;
+  align-items: start;
 }
 .category-order-top {
   width: 800px;
   overflow-x: scroll;
 }
-.category-title{
+.category-title {
   color: var(--title);
-  span{
+  span {
     color: var(--text);
   }
 }
-.card-category{
-  width: 600px!important;
+.card-category {
+  width: 600px !important;
 }
 @media screen and (max-width: 1050px) {
   .category-order {
-margin: 0 320px 0 0 ;
+    margin: 0 320px 0 0;
   }
-  
+
   .box {
     overflow-x: scroll;
   }
 }
 @media screen and (max-width: 950px) {
-  .category-order{
+  .category-order {
     width: 100%;
     margin: 0;
   }
