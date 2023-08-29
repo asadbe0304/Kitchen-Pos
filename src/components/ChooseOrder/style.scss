@@ -18,6 +18,11 @@
     color: var(--text);
   }
 }
+@media screen and (max-width: 1050px) {
+  .choose-card{
+    width: 30%;
+  }
+}
 @media screen and (max-width:730px) {
   .choose-order-body{
     justify-content: center!important;

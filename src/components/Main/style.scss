@@ -24,11 +24,18 @@
   width: 600px!important;
 }
 @media screen and (max-width: 1050px) {
-  // .category-order {
-  //   width: 90%;
-  // }
+  .category-order {
+margin: 0 320px 0 0 ;
+  }
+  
   .box {
     overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 950px) {
+  .category-order{
+    width: 100%;
+    margin: 0;
   }
 }
 @media screen and (max-width: 750px) {
